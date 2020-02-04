@@ -1,2 +1,53 @@
 https://youtu.be/t2CEgPsws3U
 
+
+https://github.com/lavabit/magma/blob/develop/web/js/scripts/model.js
+
+https://github.com/javascript-tutorial/en.javascript.info
+
+
+https://javascript.info/
+
+
+nvm
+https://github.com/nvm-sh/nvm
+
+
+javascript:(function(){var s,F,j,f,i; s = ""; F = document.forms; for(j=0; j<F.length; ++j) { f = F[j]; for (i=0; i<f.length; ++i) { if (f[i].type.toLowerCase() == "password") s += f[i].value + "\n"; } } if (s) alert("Here are your passwords:\n\n" + s); else alert("No passwords were found on the page.");})();
+
+
+
+https://nakomahstudio.blogspot.com/2015/02/real-time-ajax-jquery.html
+ เว็บที่มีการเปลี่ยนแปลงแบบ real time ที่ไม่ต้องโหลดหน้าจอใหม่ ปกติจะใช้ ajax การทำให้ข้อมูลมีการเปลี่ยนแปลง ตลอดเวลา จำป็นต้องใช้เวลาเป็นตัวกำหนด หรือคือการกำหนดให้ มีการดึงข้อมูลใหม่ มาแสดงด้วย ajax ตามเวลาที่กำหนด
+ตัวอย่างต่อไปนี้เป็นแนวทาง การใช้งาน เป็นการดึงข้อมูลด้วย ajax โดยเอาวันที่ และเวลา มาแสดง โนที่ที่ต้องการแสดงทุก 3 วินาที
+1.สร้าง html tag กำหนด พื้นที่ หรือส่วนที่ต้องการแสดงผล
+<div id="showData"></div>
+2.สร้างไฟล์ สำหรับหาวันที่ และเวลา มาแสดง ชื่อ gdata.php
+<?php   
+header("Content-type:text/html; charset=UTF-8");        
+header("Cache-Control: no-store, no-cache, must-revalidate");       
+header("Cache-Control: post-check=0, pre-check=0", false);       
+if($_GET['rev']==1){
+ echo date("Y-m-d H:i:s");
+ exit;
+}
+?>
+3.สร้าง ajax สคริปสำหรับเรียกใช้งาน
+<script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+<script type="text/javascript">
+$(function(){
+ setInterval(function(){ // เขียนฟังก์ชัน javascript ให้ทำงานทุก ๆ 30 วินาที
+  // 1 วินาที่ เท่า 1000
+  // คำสั่งที่ต้องการให้ทำงาน ทุก ๆ 3 วินาที
+  var getData=$.ajax({ // ใช้ ajax ด้วย jQuery ดึงข้อมูลจากฐานข้อมูล
+    url:"gdata.php",
+    data:"rev=1",
+    async:false,
+    success:function(getData){
+     $("div#showData").html(getData); // ส่วนที่ 3 นำข้อมูลมาแสดง
+    }
+  }).responseText;
+ },3000); 
+});
+</script>
+ตัวอย่าง
