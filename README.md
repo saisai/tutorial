@@ -8,3 +8,4 @@ git push -u origin master
 git clone https://saisai@github.com/saisai/tutorial.git
 
 git remote add origin https://saisai@github.com/saisai/tutorial.git
+git push --set-upstream origin master
