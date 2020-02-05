@@ -51,3 +51,6 @@ $(function(){
 });
 </script>
 ตัวอย่าง
+
+
+https://www.gitmemory.com/issue/msys2/MINGW-packages/5848/539399137

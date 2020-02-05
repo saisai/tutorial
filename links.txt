@@ -1,0 +1,26 @@
+https://hostadvice.com/how-to/how-to-use-amazon-route-53-to-manage-your-dns/
+
+
+https://letsencrypt.org/docs/
+
+
+
+https://certbot.eff.org/lets-encrypt/centosrhel8-apache
+
+echo "0 0,12 * * * root python3 -c 'import random; import time; time.sleep(random.random() * 3600)' && /usr/local/bin/certbot-auto renew" | sudo tee -a /etc/crontab > /dev/null
+echo "0 0,12 * * * root python -c 'import random; import time; time.sleep(random.random() * 3600)' && /usr/local/bin/certbot-auto renew" | tee -a /f/wheezy/www/test.txt > /dev/null
+
+
+http://www.linuxfromscratch.org/
+
+
+https://linuxize.com/post/secure-apache-with-let-s-encrypt-on-centos-8/
+
+https://www.server-world.info/en/note?os=CentOS_8&p=ssl&f=2
+
+https://www.errorhat.com/how-to-setup-lets-encrypt-ssl-certificate-with-apache-on-centos-8-rhel-8/
+
+https://stackoverflow.com/questions/1628563/move-the-most-recent-commits-to-a-new-branch-with-git?rq=1
+
+
+https://afilias.info/
