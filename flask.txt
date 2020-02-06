@@ -1,0 +1,33 @@
+wsgi.py
+import sys
+path = '/home/saisai/mysite'
+if path not in sys.path:
+   sys.path.insert(0, path)
+
+from flask_app import app as application
+
+
+flask_app.py
+from flask import Flask
+app = Flask(__name__)
+
+@app.route("/")
+def hello():
+	return "Hello World!"
+
+if __name__ == "__main__":
+    app.run()
+	
+	
+https://medium.com/@rudder_/launching-a-flask-app-from-scratch-on-pythonanywhere-fef871171e18
+
+pythonanywhere.com	
+
+
+
+https://help.pythonanywhere.com/pages/Flask/
+
+
+mkvirtualenv --python=/usr/bin/python3.6 my-virtualenv  # use whichever python version you prefer
+pip install flask
+workon my-virtualenv

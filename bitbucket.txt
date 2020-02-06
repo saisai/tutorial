@@ -1,0 +1,57 @@
+Bitbucket webhooks
+	https://www.runatlantis.io/docs/configuring-webhooks.html#github-github-enterprise
+	https://confluence.atlassian.com/bitbucketserver/managing-webhooks-in-bitbucket-server-938025878.html
+	
+	
+	https://www.random.org/integers/
+	
+	
+	ruby -rsecurerandom -e 'puts SecureRandom.hex(32)'
+	
+	https://support.gitkraken.com/integrations/bitbucket-server/
+	
+	
+	https://jonathannicol.com/blog/2013/11/19/automated-git-deployments-from-bitbucket/	
+	
+	
+	https://bitbucket.org/lilliputten/automatic-bitbucket-deploy/src/master/
+	
+	
+	https://support.smartbear.com/collaborator/docs/source-control/repo-hosting/index.html
+	
+	
+	https://stackoverflow.com/questions/31128021/bitbucket-webhooks?rq=1
+	
+	
+	https://github.com/cvitter/mattermost-bitbucket-bridge
+	
+	
+	https://community.atlassian.com/t5/Bitbucket-questions/How-can-I-deploy-my-bitbucket-repo-to-my-production-server/qaq-p/565348
+	
+	
+Github
+	https://github.com/bloomberg/python-github-webhook
+	https://github.com/razius/github-webhook-handler
+	https://dev.to/aadibajpai/deploying-to-pythonanywhere-via-github-1j7b
+	
+		
+	
+	
+	
+python
+	https://pynative.com/python-generate-random-string/
+	https://www.pythonanywhere.com/pricing/
+	https://github.com/pythonanywhere/helper_scripts
+	
+	
+linux
+	https://www.linuxnix.com/
+	https://www.cyberciti.biz/faq/find-linux-distribution-name-version-number/
+	
+	uname -a
+	uname -mrs
+	cat /proc/version
+	cat /etc/*-release
+	lsb_release -a
+	hostnamectl
+		

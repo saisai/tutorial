@@ -1,0 +1,4 @@
+autoit
+	https://www.autoitscript.com/site/autoit-script-editor/downloads/
+	https://www.autoitscript.com/autoit3/docs/guiref/GUIRef.htm
+	https://www.todaysoftmag.com/article/2152/automate-it-with-autoit

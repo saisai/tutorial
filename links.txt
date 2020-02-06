@@ -24,3 +24,6 @@ https://stackoverflow.com/questions/1628563/move-the-most-recent-commits-to-a-ne
 
 
 https://afilias.info/
+
+
+https://confluence.atlassian.com/bitbucket/resolve-merge-conflicts-704414003.html
