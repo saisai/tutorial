@@ -40,3 +40,15 @@ https://developer.wordpress.org/reference/hooks/admin_post_action/
 
 https://developer.wordpress.org/reference/functions/attachment_url_to_postid/
 https://developer.wordpress.org/reference/functions/check_ajax_referer/
+
+
+https://wordpress.stackexchange.com/questions/24367/globals-array-for-wordpress
+add_action( 'shutdown', 'print_them_globals' );
+
+function print_them_globals() {
+
+    ksort( $GLOBALS );
+    echo '<ol>';
+    echo '<li>'. implode( '</li><li>', array_keys( $GLOBALS ) ) . '</li>';
+    echo '</ol>';
+}
