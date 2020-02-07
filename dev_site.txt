@@ -1,0 +1,38 @@
+django 
+	
+	https://dev.to/ndemo/how-i-deployed-my-django-app-to-vultr-vps-3k1i
+	https://github.com/ndemo-richard/ndemo-master/tree/master/ndemo
+	
+	
+	https://content.nanobox.io/how-to-deploy-django-applications-to-vultr-with-nanobox/
+	
+	
+	https://www.vultr.com/docs/how-to-install-django-on-centos-7
+	
+	
+	https://www.vultr.com/docs/setup-django-on-debian-8
+	
+	https://www.vultr.com/docs/installing-django-on-ubuntu-14
+	
+	
+	https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-18-04
+	sudo -u postgres psql
+	CREATE DATABASE myproject;
+	CREATE USER myprojectuser WITH PASSWORD 'password';
+	TER ROLE myprojectuser SET client_encoding TO 'utf8';
+	ALTER ROLE myprojectuser SET default_transaction_isolation TO 'read committed';
+	ALTER ROLE myprojectuser SET timezone TO 'UTC';
+	GRANT ALL PRIVILEGES ON DATABASE myproject TO myprojectuser;
+	\q
+	
+	
+	
+	
+	http://www.learningaboutelectronics.com/Articles/How-to-run-a-django-website-on-a-live-server-with-linux.php
+	
+	
+	
+	
+	
+	python3 -m venv mysite/env
+	source mysite/env/bin/activate

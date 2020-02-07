@@ -1,0 +1,42 @@
+https://codex.wordpress.org/Function_Reference
+https://developer.wordpress.org/reference/functions/
+https://developer.wordpress.org/reference/hooks/page/2/
+https://developer.wordpress.org/reference/hooks/save_post/
+
+function my_project_updated_send_email( $post_id ) {
+ 
+    // If this is just a revision, don't send the email.
+    if ( wp_is_post_revision( $post_id ) ) {
+        return;
+        }
+ 
+    $post_title = get_the_title( $post_id );
+    $post_url = get_permalink( $post_id );
+    $subject = 'A post has been updated';
+ 
+    $message = "A post has been updated on your website:\n\n";
+    $message .= $post_title . ": " . $post_url;
+ 
+    // Send email to admin.
+    wp_mail( 'admin@example.com', $subject, $message );
+}
+add_action( 'save_post', 'my_project_updated_send_email' );
+
+
+If you want to change a menu label, you can hook this action and change the global $menu, $submenu values,
+	
+add_action( 'admin_menu', 'change_media_label' );
+function change_media_label(){
+  global $menu, $submenu;
+  debug_msg($menu);
+  $menu[10][0] = 'Photos/Videos';
+  $submenu['upload.php'][5][0] = 'All Photos/Videos';
+  $submenu['upload.php'][10][0] = 'Upload new';
+}
+
+
+https://developer.wordpress.org/reference/hooks/admin_post_action/
+
+
+https://developer.wordpress.org/reference/functions/attachment_url_to_postid/
+https://developer.wordpress.org/reference/functions/check_ajax_referer/

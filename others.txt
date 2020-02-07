@@ -1,2 +1,7 @@
 How to Configure DNS on Vultr
 	https://serverpilot.io/docs/how-to-configure-dns-on-vultr/
+	
+	
+	
+	
+	

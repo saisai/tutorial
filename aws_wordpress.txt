@@ -1,0 +1,49 @@
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/amazon-linux-2-virtual-machine.html
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hosting-wordpress.html
+
+mysql -u root -p
+CREATE DATABASE `wordpress-db`;
+GRANT ALL PRIVILEGES ON `wordpress-db`.* TO "wordpress-user"@"localhost";
+FLUSH PRIVILEGES;
+exit
+
+
+sudo vim /etc/httpd/conf/httpd.conf
+
+<Directory "/var/www/html">
+    #
+    # Possible values for the Options directive are "None", "All",
+    # or any combination of:
+    #   Indexes Includes FollowSymLinks SymLinksifOwnerMatch ExecCGI MultiViews
+    #
+    # Note that "MultiViews" must be named *explicitly* --- "Options All"
+    # doesn't give it to you.
+    #
+    # The Options directive is both complicated and important.  Please see
+    # http://httpd.apache.org/docs/2.4/mod/core.html#options
+    # for more information.
+    #
+    Options Indexes FollowSymLinks
+
+    #
+    # AllowOverride controls what directives may be placed in .htaccess files.
+    # It can be "All", "None", or any combination of the keywords:
+    #   Options FileInfo AuthConfig Limit
+    #
+    #AllowOverride None
+	AllowOverride All
+
+    #
+    # Controls who can get stuff from this server.
+    #
+    Require all granted
+</Directory>
+
+
+ sudo yum install php72-gd
+ sudo chown -R apache /var/www
+ sudo chgrp -R apache /var/www
+ sudo chmod 2775 /var/www
+ find /var/www -type d -exec sudo chmod 2775 {} \;
+ ind /var/www -type f -exec sudo chmod 0664 {} \;

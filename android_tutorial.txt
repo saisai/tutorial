@@ -1,0 +1,8 @@
+https://www.simplifiedcoding.net/json-parsing-in-android/
+
+https://www.tutorialspoint.com/android/android_json_parser.htm
+
+https://www.codeproject.com/Articles/267023/Send-and-receive-json-between-android-and-php
+
+
+https://stackoverflow.com/questions/9671546/asynctask-android-example

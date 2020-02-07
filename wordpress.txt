@@ -1,0 +1,234 @@
+https://en.support.wordpress.com/custom-design/editing-css/
+
+
+ftp installation error
+
+define( 'FS_METHOD', 'direct' );
+
+
+RewriteEngine On
+#RewriteBase /
+RewriteBase /wordpress/
+RewriteRule ^index\.php$ - [L]
+
+# add a trailing slash to /wp-admin
+RewriteRule ^([_0-9a-zA-Z-]+/)?wp-admin$ $1wp-admin/ [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?(wp-(content|admin|includes).*) $2 [L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?(.*\.php)$ $2 [L]
+RewriteRule . index.php [L]
+
+
+u714134564_0IIbI
+
+
+mysql -uroot -proot u714134564_0IIbI < database.sql
+
+
+UPDATE `wp_options` SET `option_value` = 'http://192.168.1.123/wordpress/' WHERE `wp_options`.`option_id` = 1; 
+
+https://www.hostinger.com/tutorials/how-to-use-hostinger-dns-zone-editor
+
+https://www.hostinger.com/tutorials/dns/how-to-change-domain-nameservers
+
+https://www.hostinger.com/tutorials/how-to-point-domain-to-hostinger
+
+
+https://www.impressivewebs.com/html-table-code-generator/
+
+https://wordpress.org/plugins/duplicate-wp-page-post/
+
+
+ffmpeg -f concat -safe 0 -i tt.txt -c copy output.mp4
+
+
+https://stackoverflow.com/questions/25835424/removing-second-password-input-from-django-registration-form
+
+https://stackoverflow.com/questions/14299039/django-how-to-remove-the-password-field-from-the-usercreationform/14301395
+
+https://stackoverflow.com/questions/45452670/adding-a-new-field-along-with-username-and-password-in-djangos-login-form
+
+
+https://stackoverflow.com/questions/15846743/django-keyerror-at-register
+
+https://stackoverflow.com/questions/34962398/keyerror-at-registration-value-password1/34963664
+
+
+https://stackoverflow.com/questions/15846743/django-keyerror-at-register
+
+
+https://computingforgeeks.com/install-mariadb-10-on-ubuntu-18-04-and-centos-7/
+
+sudo apt -y install mariadb-server mariadb-client
+
+sudo apt autoremove
+
+
+ddddcf4f-96b5-4fe3-a3a3-490061014a12
+
+
+https://ixnfo.com/en/solution-of-error-with-binary-mode-when-importing-mysql-dump-from-the-command-line.html
+
+https://blog.pythian.com/mysql-client-fails-to-load-sql-file/
+
+https://computingforgeeks.com/install-mariadb-10-on-ubuntu-18-04-and-centos-7/
+
+https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-ubuntu-18-04
+
+curl https://beyondgrep.com/ack-v3.3.1 > ~/bin/ack && chmod 0755 ~/bin/ack
+
+
+jQuery( document ).ready(
+	function() {
+		jQuery( 'body' ).on(
+			'click', '.lingvico_plugins_installer_link', function (e) {
+				var bt = jQuery( this );
+				if (bt.hasClass( 'process-now' )) {
+					return;
+				}
+				bt.html( bt.data( 'processing' ) ).addClass( 'process-now updating-message' );
+				var slug = bt.data( 'slug' ),
+				url      = bt.attr( 'href' );
+				//Request plugin activation
+				jQuery.get( url ).done(
+					function(response) {
+						location.reload();
+					}
+				);
+				e.preventDefault();
+				return false;
+			}
+		);
+	}
+);
+
+
+
+/*
+
+It is said the folder "cn" is created in 10:57 PM Yesterday
+The script will be run at 11:00 PM every day and
+will delete the folder "cn" if it exists.
+
+*/
+/*
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+*/
+
+function rrmdir($dir) {
+   if (is_dir($dir)) {
+     $objects = scandir($dir);
+     foreach ($objects as $object) {
+       if ($object != "." && $object != "..") {
+         if (filetype($dir."/".$object) == "dir"){
+            rrmdir($dir."/".$object);
+         }else{ 
+            echo $dir."/".$object;
+            unlink($dir."/".$object);
+         }
+       }
+     }
+     reset($objects);
+     echo "remove" . $dir;
+     rmdir($dir);
+  }
+}
+
+if (is_dir("/home/folder/public_html/cn"))
+{
+    
+    rrmdir("/home/folder/public_html/cn");
+    
+}
+
+
+https://hostadvice.com/how-to/how-to-enable-apache-mod_rewrite-on-an-ubuntu-18-04-vps-or-dedicated-server/
+
+sudo a2enmod rewrite
+sudo systemctl restart apache2
+
+
+jQuery('body').on('click', '.wpb_tabs_nav a', function() {
+	setTimeout(function(){
+		jQuery(window).trigger('resize');
+	}, 500); //change 500 to your needs
+});
+
+
+https://www.digitalocean.com/community/questions/can-t-install-wordpress-themes-ftp-error
+
+
+So I got it working by doing this and then ran this:
+chown -R www-data:www-data /var/www
+find /var/www/ -type d -exec chmod 755 {} \;
+find /var/www/ -type f -exec chmod 644 {} \;
+
+
+	<?php
+	
+	//global $wpdb;
+	//$customers = $wpdb->get_results("SELECT * FROM wp_posts LIMIT 0, 10");
+	?>
+
+	<table class="table table-hover">
+
+	<?php foreach($customers as $customer){ ?>
+
+	<tr>
+	 <td><center><?php echo $customer->post_date; ?></center></td>
+	 <td><center><?php echo $customer->guid; ?></td>
+	 <td><center><?php echo $customer->post_date; ?></center></td>
+	 <td><center><?php echo $customer->post_date; ?></center></td>
+	</tr>
+
+	<?php } ?>
+
+	</table>
+	
+	
+https://www.howtoforge.com/tutorial/configure-postfix-to-use-gmail-as-a-mail-relay/
+postmap: fatal: parameter inet_interfaces: no local interface found for ::1
+https://nixhive.com/fatal-parameter-inet_interfaces-no-local-interface-found-for-1/
+
+
+echo "tester hello" | mail -s "Test subject" devsmtp2@gmail.com
+	
+	
+https://www.smashingmagazine.com/2011/10/how-to-use-ajax-in-wordpress/
+https://developer.wordpress.org/reference/functions/wp_mail/
+https://www.codeinwp.com/blog/wordpress-rest-api/
+https://www.interserver.net/tips/kb/linux-mail-command-usage-examples/
+https://www.interserver.net/tips/kb/linux-mail-command-usage-examples/
+
+
+[contact-form-7 id="3159" title="Contact us form"]	
+
+https://webdesign.tutsplus.com/tutorials/how-to-use-the-wordpress-rest-api-a-practical-tutorial--cms-33566
+https://github.com/tutsplus/how-to-use-the-wordpress-rest-api-a-practical-tutorial
+https://github.com/enovathemes/tutsproject
+
+http://snp.test/wp-json/mytwentyseventeentheme/v1/latest-posts/1
+
+
+wordpress creating restapi
+	https://www.sitepoint.com/creating-custom-endpoints-for-the-wordpress-rest-api/
+	https://www.wpsuperstars.net/wordpress-rest-api/
+	https://www.wpsuperstars.net/blogging-platforms-compared/
+	https://digitalborn.org/display-wp-posts-rest-api/
+	
+file permission
+	https://stackoverflow.com/questions/27845139/the-uploaded-file-could-not-be-moved-to-wp-content-uploads-2015-01-issue-on-ima
+	https://www.tipsandtricks-hq.com/how-to-fix-the-unable-to-create-directory-error-in-wordpress-5264
+	https://www.digitalocean.com/community/questions/wordpress-the-uploaded-file-could-not-be-moved-to-wp-content-uploads
+	
+	
+https://www.wpblog.com/wordpress-rest-api/	
+
+https://github.com/nathanegraham/responsive-html-email-template/blob/master/email.html
+
+https://www.hostinger.com/tutorials/email/
