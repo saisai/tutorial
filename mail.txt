@@ -1,0 +1,92 @@
+https://www.iredmail.org/
+
+https://github.com/sovereign/sovereign
+
+https://github.com/modoboa/modoboa
+
+
+https://www.vultr.com/docs/how-to-set-up-a-mail-server-using-iredmail-on-ubuntu-16-04
+https://bitbucket.org/zhb/iredmail/src/default/
+
+https://www.vultr.com/docs/setup-letsencrypt-on-linux
+
+
+https://github.com/certbot/certbot
+
+https://bitbucket.org/zhb/iredmail/src/default/
+
+
+https://mailinabox.email/advanced-configuration.html#relaying
+
+
+
+https://github.com/mail-in-a-box/mailinabox
+
+https://www.vultr.com/docs/how-to-install-mail-in-a-box-on-ubuntu-18-04
+
+
+https://www.vultr.com/docs/how-to-install-iredmail-on-ubuntu-18-04
+
+https://www.vultr.com/docs/how-to-install-rainloop-webmail-on-ubuntu-16-04
+
+
+https://github.com/roundcube/roundcubemail
+
+https://github.com/roundcube/roundcubemail/wiki/Install-Requirements
+
+https://stackoverflow.com/questions/16048347/unable-to-send-email-using-gmail-smtp-server-through-phpmailer-getting-error-s
+
+
+https://github.com/PHPMailer/PHPMailer
+
+
+https://www.cyberciti.biz/faq/how-to-configure-postfix-relayhost-smarthost-to-send-email-using-an-external-smptd/
+
+
+https://gist.github.com/JustOnce/a358f51067a1b3d88543
+
+
+https://discuss.vultr.com/discussion/1027/smtp-port-25-is-supposed-to-have-been-opened-but-doesnt-seem-to
+
+
+https://en.wikipedia.org/wiki/Reverse_DNS_lookup
+
+
+https://www.vultr.com/resources/faq/#reversednsediting
+
+https://devops.ionos.com/tutorials/configure-a-postfix-relay-through-gmail-on-centos-7/
+
+
+https://bobcares.com/blog/vultr-open-port/
+
+iptables -A INPUT -p tcp --dport 25 -j ACCEPT
+
+
+https://wordpress.org/plugins/post-smtp/#installation
+
+https://www.cloudways.com/blog/setup-configure-smtp-on-wordpress/
+https://www.vultr.com/docs/easy-iptables-configuration-and-examples-on-ubuntu-16-04
+
+Check if ports are open 
+	nc -z -w5 -v 192.168.1.123 25
+	nc -z -w5 -v 192.168.1.123 8080
+	nc -z -w5 -v 192.168.1.123 22
+	
+Check if which ports are open in server 
+	sudo netstat -tulpn
+
+ssh port forward
+	https://www.vultr.com/docs/port-forwarding-and-proxying-using-openssh
+
+
+
+errors
+	https://discuss.vultr.com/discussion/430/smtp-block-is-unreasonable
+	https://community.cloudways.com/t/email-setup-for-vultr/534
+	
+	
+
+
+sudo ufw allow 25/tcp
+
+https://bobcares.com/custom-software-development/
