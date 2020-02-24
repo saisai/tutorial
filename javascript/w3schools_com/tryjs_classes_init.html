@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<h2>JavaScript Class</h2>
+
+<p>In this example we demonstrate a simple class definition and how to use it.</p>
+
+<p id="demo"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<script>
+class Car {
+	constructor(brand) {
+		this.carname = brand;
+	}
+	present() {
+		return "I have a " + this.carname;
+	}
+	
+	present2(x) {
+		return x + " I have a " + this.carname;
+	}	
+	
+	static hello()
+	{
+		return "hello";
+	}
+	
+	static hello2(x)
+	{
+		return "hello " + x;
+	}	
+}
+
+mycar = new Car("Ford");
+
+document.getElementById("demo").innerHTML = mycar.carname;
+document.getElementById("demo2").innerHTML = mycar.present();
+document.getElementById("demo3").innerHTML = mycar.present2("Hello");
+document.getElementById("demo4").innerHTML = Car.hello();
+document.getElementById("demo5").innerHTML = Car.hello2("test");
+</script>
+</body>
+</html>
