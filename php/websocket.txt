@@ -1,0 +1,34 @@
+wss://stream67.forexpros.com/echo/586/a_x94rb6/websocket
+
+https://phppot.com/php/simple-php-chat-using-websocket/
+https://www.goragod.com/knowledge/ajax_%E0%B9%81%E0%B8%A5%E0%B8%B0_websocket_%E0%B9%80%E0%B8%A5%E0%B8%B7%E0%B8%AD%E0%B8%81%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%A3%E0%B8%94%E0%B8%B5.html
+
+https://supunkavinda.blog/php/chat-app-with-php-nodejs
+
+https://github.com/SupunKavinda/Chat-App-With-PHP-and-Node.JS
+
+https://www.phoca.cz/documents/38-tools/873-websockets-and-php
+https://medium.com/@cn007b/super-simple-php-websocket-example-ea2cd5893575
+
+https://www.twilio.com/blog/create-php-websocket-server-build-real-time-even-driven-application
+
+http://socketo.me/docs/hello-world
+
+https://tsh.io/blog/php-websocket/
+
+https://www.cuelogic.com/blog/php-and-html5-websocket-server-and-client-communication
+
+https://github.com/bloatless/php-websocket
+
+
+look javascript source
+https://www.investing.com/indices/major-indices
+
+
+https://www.twilio.com/blog/create-php-websocket-server-build-real-time-even-driven-application
+mkdir php-sockets && cd php-sockets
+touch composer.json index.html app.php
+mkdir app && cd app && touch socket.php
+
+https://github.com/themarcusbattle/ratchet-php-websocket-server-starter
+https://blog.samuel.ninja/the-tutorial-for-php-websockets-that-i-wish-had-existed/#makingthewebsocketpersistentonyourserver
