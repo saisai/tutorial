@@ -1,0 +1,39 @@
+fetch
+map
+reduce
+forEach
+
+pipenv lock
+
+pip3 install pipenv
+pipenv shell
+
+pip3 install django django-rest-framework django-rest-knox
+django-admin startproject leadmanager
+
+python3 manage.py startapp leads
+
+python3 manage.py makemigrations leads
+python3 manage.py migrate
+
+
+python3 manage.py startapp frontend
+mkdir -p frontend/src/components
+mkdir -p frontend/{static,templates}/frontend
+
+npm init -y
+npm i -D webpack webpack-cli
+npm i -D @babel/core babel-loader @babel/preset-env @babel/preset-react babel-plugin-transform-class-properties
+npm i -D react react-dom prop-types
+
+https://pipenv.pypa.io/en/latest/
+
+https://bootswatch.com/
+https://getbootstrap.com/
+
+npm run dev
+
+python3 leadmanager/manage.py runserver 192.168.1.111:8000
+
+https://www.youtube.com/watch?v=BmL8iaLMnQ0&list=PLillGF-RfqbbRA-CIUxlxkUpbq0IFkX60&index=3
+https://github.com/bradtraversy/lead_manager_react_django/blob/master/package.json
