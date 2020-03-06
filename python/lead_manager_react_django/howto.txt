@@ -25,6 +25,8 @@ npm init -y
 npm i -D webpack webpack-cli
 npm i -D @babel/core babel-loader @babel/preset-env @babel/preset-react babel-plugin-transform-class-properties
 npm i -D react react-dom prop-types
+npm i redux react-redux redux-thunk redux-devtools-extension
+npm i axios
 
 https://pipenv.pypa.io/en/latest/
 
@@ -36,4 +38,5 @@ npm run dev
 python3 leadmanager/manage.py runserver 192.168.1.111:8000
 
 https://www.youtube.com/watch?v=BmL8iaLMnQ0&list=PLillGF-RfqbbRA-CIUxlxkUpbq0IFkX60&index=3
+https://www.youtube.com/watch?v=Fia-GGgHpK0&list=PLillGF-RfqbbRA-CIUxlxkUpbq0IFkX60&index=4
 https://github.com/bradtraversy/lead_manager_react_django/blob/master/package.json
