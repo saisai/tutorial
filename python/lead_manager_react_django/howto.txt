@@ -7,6 +7,7 @@ pipenv lock
 
 pip3 install pipenv
 pipenv shell
+pipenv install django djangorestframework django-rest-knox
 
 pip3 install django django-rest-framework django-rest-knox
 django-admin startproject leadmanager
@@ -27,6 +28,7 @@ npm i -D @babel/core babel-loader @babel/preset-env @babel/preset-react babel-pl
 npm i -D react react-dom prop-types
 npm i redux react-redux redux-thunk redux-devtools-extension
 npm i axios
+npm i react-alert react-alert-template-basic react-transition-group
 
 https://pipenv.pypa.io/en/latest/
 
@@ -36,6 +38,7 @@ https://getbootstrap.com/
 npm run dev
 
 python3 leadmanager/manage.py runserver 192.168.1.111:8000
+python3 leadmanager/manage.py runserver 192.168.0.222:8000
 
 https://www.youtube.com/watch?v=BmL8iaLMnQ0&list=PLillGF-RfqbbRA-CIUxlxkUpbq0IFkX60&index=3
 https://www.youtube.com/watch?v=Fia-GGgHpK0&list=PLillGF-RfqbbRA-CIUxlxkUpbq0IFkX60&index=4
