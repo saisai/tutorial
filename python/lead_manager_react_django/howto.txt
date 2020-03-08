@@ -40,6 +40,8 @@ npm run dev
 python3 leadmanager/manage.py runserver 192.168.1.111:8000
 python3 leadmanager/manage.py runserver 192.168.0.222:8000
 
+python3 manage.py startapp accounts
+
 https://www.youtube.com/watch?v=BmL8iaLMnQ0&list=PLillGF-RfqbbRA-CIUxlxkUpbq0IFkX60&index=3
 https://www.youtube.com/watch?v=Fia-GGgHpK0&list=PLillGF-RfqbbRA-CIUxlxkUpbq0IFkX60&index=4
 https://github.com/bradtraversy/lead_manager_react_django/blob/master/package.json
