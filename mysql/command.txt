@@ -1,0 +1,41 @@
+sudo mysql_secure_installation
+
+connect to mysql
+
+mysql -uroot -proot
+
+To show Databases[]
+show databases;
+
+https://stackoverflow.com/questions/11267309/importing-zipped-files-in-mysql-using-command-line
+sudo apt install p7zip-full
+
+import from zip file to mysql 
+7z x -so mysqlsampledatabase.zip | mysql -uroot -p
+
+
+mysql -uroot -proot -e 'show databases;'
+ mysql -uroot -proot  -h localhost -P 3306 -e 'show databases;'
+ 
+ https://stackoverflow.com/questions/15872543/access-mysql-remote-database-from-command-line
+ 
+ 
+  desc customers;
+  
+   show triggers;
+   https://dataedo.com/kb/query/mysql/list-triggers
+   
+   https://stackoverflow.com/questions/47363/how-do-you-list-all-triggers-in-a-mysql-database
+   select trigger_schema, trigger_name, action_statement
+from information_schema.triggers;
+
+https://www.ntu.edu.sg/home/ehchua/programming/sql/MySQL_Beginner.html
+https://www.w3resource.com/mysql/mysql-tutorials.php
+https://www.techonthenet.com/mysql/tutorial_complete.php
+https://www.edureka.co/blog/mysql-tutorial/
+
+SHOW ERRORS;
+SHOW PROCESSLIST;
+SET GLOBAL event_scheduler = ON;
+
+https://www.mysqltutorial.org/getting-started-mysql-python-connector/
