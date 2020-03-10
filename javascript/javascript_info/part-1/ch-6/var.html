@@ -1,0 +1,31 @@
+<script>
+(function() {
+	let message = "hello";
+	
+	document.write(message);
+	document.write('<br />');
+})();
+
+// Ways to create IIFE
+
+(function() {
+  document.write("Parentheses around the function");
+  document.write('<br />');
+})();
+
+(function() {
+  document.write("Parentheses around the whole thing");
+  document.write('<br />');
+}());
+
+!function() {
+  document.write("Bitwise NOT operator starts the expression");
+  document.write('<br />');
+}();
+
++function() {
+  document.write("Unary plus starts the expression");
+  document.write('<br />');
+}();
+
+</script>
