@@ -39,3 +39,57 @@ SHOW PROCESSLIST;
 SET GLOBAL event_scheduler = ON;
 
 https://www.mysqltutorial.org/getting-started-mysql-python-connector/
+
+
+mysql -uroot -proot classicmodels -e "DELIMITER $$
+ 
+CREATE PROCEDURE GetCustomers()
+BEGIN
+    SELECT customerName, creditlimit
+    FROM customers;
+    END$$"
+	
+mysql -uroot -proot classicmodels -e "	
+	DELIMITER $$
+ 
+CREATE PROCEDURE GetCustomerLevel(
+    in  p_customerNumber int(11), 
+    out p_customerLevel  varchar(10))
+BEGIN
+    DECLARE creditlim double;
+ 
+    SELECT creditlimit INTO creditlim
+    FROM customers
+    WHERE customerNumber = p_customerNumber;
+ 
+    IF creditlim > 50000 THEN
+    SET p_customerLevel = 'PLATINUM';
+    ELSEIF (creditlim <= 50000 AND creditlim >= 10000) THEN
+        SET p_customerLevel = 'GOLD';
+    ELSEIF creditlim < 10000 THEN
+        SET p_customerLevel = 'SILVER';
+    END IF;
+ 
+END$$"
+
+mysql -uroot -proot classicmodels -e "CREATE TABLE accounts (
+    id     INT AUTO_INCREMENT PRIMARY KEY,
+    name   VARCHAR (50)    NOT NULL,
+    amount DECIMAL (19, 4) NOT NULL
+);"	
+mysql -uroot -proot classicmodels -e "INSERT INTO accounts(name,amount)
+VALUES('John',25000),
+      ('Mary',95000);"	
+mysql -uroot -proot classicmodels -e "SELECT *
+  FROM accounts;"	
+  
+mysql -uroot -proot classicmodels -e "CREATE TABLE files (
+    id   INT           AUTO_INCREMENT PRIMARY KEY,
+    mime VARCHAR (255) NOT NULL,
+    data BLOB          NOT NULL
+);"
+
+mysql -uroot -proot classicmodels -e "SELECT *
+  FROM files;"	
+  
+https://www.mysqltutorial.org/php-mysql-blob/  
