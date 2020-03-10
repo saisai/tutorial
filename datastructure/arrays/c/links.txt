@@ -1,0 +1,2 @@
+https://www.mycplus.com/tutorials/c-programming-tutorials/arrays/
+https://www.geeksforgeeks.org/arrays-in-c-cpp/
