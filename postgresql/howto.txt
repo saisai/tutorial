@@ -6,3 +6,44 @@ sudo systemctl reload postgresql
 Peer authentication failed for user with all privileges in Postgres 9.5
 
 https://askubuntu.com/questions/820792/peer-authentication-failed-for-user-with-all-privileges-in-postgres-9-5
+
+Open /etc/postgresql/9.5/main/pg_hba.conf with root access
+
+ sudo nano /etc/postgresql/9.5/main/pg_hba.conf
+Change peer to md5 in these lines.
+
+Before changing
+
+# "local" is for Unix domain socket connections only
+local   all             all                                     peer
+# IPv4 local connections:
+host    all             all             127.0.0.1/32            peer
+# IPv6 local connections:
+host    all             all             ::1/128                 peer
+After your change
+
+# "local" is for Unix domain socket connections only
+local   all             all                                     md5
+# IPv4 local connections:
+host    all             all             127.0.0.1/32            md5
+# IPv6 local connections:
+host    all             all             ::1/128                 md5
+
+
+https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-16-04
+
+sudo -u postgres psql
+CREATE DATABASE myproject;
+CREATE USER myprojectuser WITH PASSWORD 'password';	
+ALTER ROLE myprojectuser SET client_encoding TO 'utf8';
+ALTER ROLE myprojectuser SET default_transaction_isolation TO 'read committed';
+ALTER ROLE myprojectuser SET timezone TO 'UTC';
+GRANT ALL PRIVILEGES ON DATABASE myproject TO myprojectuser;
+\q
+
+http://postgresguide.com/utilities/psql.html
+psql "dbname=dbhere host=hosthere user=userhere password=pwhere port=5432 sslmode=require"
+psql "dbname=myproject host=localhost user=myprojectuser password=myprojectuser port=5432 sslmode=require"
+
+https://help.guebs.eu/connect-to-your-postgresql-database-using-psql-command/
+psql -h postgresql.guebs.net -U user_name-ddatabase_name
