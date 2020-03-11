@@ -1,0 +1,8 @@
+sudo apt-get install postgresql postgresql-client postgresql-contrib
+
+sudo systemctl reload postgresql
+
+
+Peer authentication failed for user with all privileges in Postgres 9.5
+
+https://askubuntu.com/questions/820792/peer-authentication-failed-for-user-with-all-privileges-in-postgres-9-5

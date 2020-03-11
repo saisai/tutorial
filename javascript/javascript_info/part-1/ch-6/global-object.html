@@ -1,0 +1,19 @@
+<script>
+// make current user information global, to let all scripts access it
+window.currentUser = {
+  name: "John"
+};
+
+// somewhere else in code
+document.write(currentUser.name);  // John
+document.write('<br />');
+
+// or, if we have a local variable with the name "currentUser"
+// get it from window explicitly (safe!)
+document.write(window.currentUser.name); // John
+document.write('<br />');
+
+if (!window.Promise) {
+  alert("Your browser is really old!");
+}
+</script>

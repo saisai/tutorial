@@ -1,0 +1,13 @@
+https://stackabuse.com/linked-list-programming-interview-questions/
+https://stackabuse.com/linked-lists-in-detail-with-python-examples-single-linked-lists/
+https://en.wikipedia.org/wiki/Discrete_mathematics
+https://en.wikipedia.org/wiki/List_of_data_structures
+https://stackabuse.com/big-o-notation-and-algorithm-analysis-with-python-examples/
+
+https://www.freecodecamp.org/news/python-interview-question-guide-how-to-code-a-linked-list-fd77cbbd367d/
+
+https://runestone.academy/runestone/books/published/pythonds/index.html
+https://www.edureka.co/blog/data-structures-and-algorithms-in-python/
+https://www.edureka.co/blog/data-structures-and-algorithms-in-python/
+https://www.edureka.co/blog/data-structures-in-python/#linkedlist
+https://www.edureka.co/blog/data-structures-in-python/#graph

@@ -1,0 +1,71 @@
+<script>
+
+function write(param)
+{
+	document.write(param);
+	document.write("<br />");
+	
+	
+}
+
+function sayHi() {
+	document.write("Hi");
+}
+
+write(sayHi.name);
+
+
+let sayHi2 = function() {
+  write("Hi");
+};
+
+write(sayHi2.name); // sayHi (there's a name!)
+
+function f(sayHi = function() {}) {
+  write(sayHi.name); // sayHi (works!)
+}
+
+f();
+
+
+function makeCounter() {
+  // instead of:
+  // let count = 0
+
+  function counter() {
+    return counter.count++;
+  };
+
+  counter.count = 0;
+
+  return counter;
+}
+
+let counter = makeCounter();
+write( counter() ); // 0
+write( counter() ); // 1
+
+
+function makeCounter2() {
+
+  function counter() {
+    return counter.count++;
+  };
+
+  counter.count = 0;
+
+  return counter;
+}
+
+let counter2 = makeCounter2();
+
+counter2.count = 10;
+write( counter2() ); // 10
+
+
+let sayHi3 = function func(who) {
+  write(`Hello, ${who}`);
+};
+
+sayHi3("John"); // Hello, John
+</script>
