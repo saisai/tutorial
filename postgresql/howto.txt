@@ -62,3 +62,16 @@ sudo psql -U postgres
 
 postgres=# ALTER USER postgres WITH PASSWORD 'password';
 postgres=# \q
+
+show databases
+psql "user=postgres password=postgres" -c "\l"
+psql "user=postgres password=postgres" -c "select version();"
+psql "user=postgres password=postgres" -c "SHOW server_version;"
+psql -V
+
+psql "user=testuser password=testuser dbname=test" -c "\dt"
+psql "user=testuser password=testuser dbname=test" -c "select * from tweets;"
+https://stackoverflow.com/questions/14714953/how-to-use-the-psql-command-to-list-create-use-and-examine-databases
+
+
+sudo apt install php-pgsql
