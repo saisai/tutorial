@@ -78,3 +78,5 @@ sudo apt install php-pgsql
 
 
 https://kb.objectrocket.com/category/postgresql
+https://makandracards.com/makandra/18579-postgresql-cheat-sheet-for-mysql-lamers
+https://kapeli.com/cheat_sheets/PostgreSQL_CLI.docset/Contents/Resources/Documents/index
