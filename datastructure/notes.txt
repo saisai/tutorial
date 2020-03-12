@@ -1,0 +1,283 @@
+
+https://runestone.academy/runestone/books/published/pythonds/BasicDS/Objectives.html
+4.1. Objectives
+
+    To understand the abstract data types stack, queue, deque, and list.
+
+    To be able to implement the ADTs stack, queue, and deque using Python lists.
+
+    To understand the performance of the implementations of basic linear data structures.
+
+    To understand prefix, infix, and postfix expression formats.
+
+    To use stacks to evaluate postfix expressions.
+
+    To use stacks to convert expressions from infix to postfix.
+
+    To use queues for basic timing simulations.
+
+    To be able to recognize problem properties where stacks, queues, and deques are appropriate data structures.
+
+    To be able to implement the abstract data type list as a linked list using the node and reference pattern.
+
+    To be able to compare the performance of our linked list implementation with Python’s list implementation.
+	
+
+4.2. What Are Linear Structures?
+
+We will begin our study of data structures by considering four simple but very powerful concepts. 
+Stacks, queues, deques, and lists are examples of data collections whose items are ordered depending on how they are added or removed. 
+Once an item is added, it stays in that position relative to the other elements that came before and came after it. Collections such as these are often referred to as linear data structures.
+
+Linear structures can be thought of as having two ends. 
+Sometimes these ends are referred to as the “left” and the “right” or in some cases the “front” and the “rear.” You could also call them the “top” and the “bottom.” 
+The names given to the ends are not significant. 
+What distinguishes one linear structure from another is the way in which items are added and removed, in particular the location where these additions and removals occur. For example, a structure might allow new items to be added at only one end. 
+Some structures might allow items to be removed from either end.
+
+These variations give rise to some of the most useful data structures in computer science. 
+They appear in many algorithms and can be used to solve a variety of important problems.
+
+
+4.3. What is a Stack?
+
+A stack (sometimes called a “push-down stack”) is an ordered collection of items where the addition of new items and the removal of existing items always takes place at the same end. This end is commonly referred to as the “top.” The end opposite the top is known as the “base.”
+
+The base of the stack is significant since items stored in the stack that are closer to the base represent those that have been in the stack the longest. The most recently added item is the one that is in position to be removed first. This ordering principle is sometimes called LIFO, last-in first-out. It provides an ordering based on length of time in the collection. Newer items are near the top, while older items are near the base.
+
+Many examples of stacks occur in everyday situations. Almost any cafeteria has a stack of trays or plates where you take the one at the top, uncovering a new tray or plate for the next customer in line. Imagine a stack of books on a desk (Figure 1). The only book whose cover is visible is the one on top. To access others in the stack, we need to remove the ones that are sitting on top of them. Figure 2 shows another stack. 
+This one contains a number of primitive Python data objects.
+
+One of the most useful ideas related to stacks comes from the simple observation of items as they are added and then removed. Assume you start out with a clean desktop. Now place books one at a time on top of each other. You are constructing a stack. Consider what happens when you begin removing books. The order that they are removed is exactly the reverse of the order that they were placed. 
+Stacks are fundamentally important, as they can be used to reverse the order of items. 
+The order of insertion is the reverse of the order of removal. Figure 3 shows the Python data object stack as it was created and then again as items are removed. Note the order of the objects.
+
+Considering this reversal property, you can perhaps think of examples of stacks that occur as you use your computer. 
+For example, every web browser has a Back button. 
+As you navigate from web page to web page, those pages are placed on a stack (actually it is the URLs that are going on the stack). 
+The current page that you are viewing is on the top and the first page you looked at is at the base. 
+If you click on the Back button, you begin to move in reverse order through the pages.
+
+4.4. The Stack Abstract Data Type
+
+The stack abstract data type is defined by the following structure and operations. 
+A stack is structured, as described above, as an ordered collection of items where items are added to and removed from the end called the “top.” 
+Stacks are ordered LIFO. The stack operations are given below.
+
+    Stack() creates a new stack that is empty. It needs no parameters and returns an empty stack.
+
+    push(item) adds a new item to the top of the stack. It needs the item and returns nothing.
+
+    pop() removes the top item from the stack. It needs no parameters and returns the item. The stack is modified.
+
+    peek() returns the top item from the stack but does not remove it. It needs no parameters. The stack is not modified.
+
+    isEmpty() tests to see whether the stack is empty. It needs no parameters and returns a boolean value.
+
+    size() returns the number of items on the stack. It needs no parameters and returns an integer.
+
+For example, if s is a stack that has been created and starts out empty, then Table 1 shows the results of a sequence of stack operations.
+Under stack contents, the top item is listed at the far right.
+
+Table 1: Sample Stack Operations
+
+Stack Operation		Stack Contents			Return Value
+
+s.isEmpty()			[]						True
+
+s.push(4)			[4]						s.push('dog')
+	
+
+[4,'dog']
+	
+
+s.peek()
+	
+
+[4,'dog']
+	
+
+'dog'
+
+s.push(True)
+	
+
+[4,'dog',True]
+	
+
+s.size()
+	
+
+[4,'dog',True]
+	
+
+3
+
+s.isEmpty()
+	
+
+[4,'dog',True]
+	
+
+False
+
+s.push(8.4)
+	
+
+[4,'dog',True,8.4]
+	
+
+s.pop()
+	
+
+[4,'dog',True]
+	
+
+8.4
+
+s.pop()
+	
+
+[4,'dog']
+	
+
+True
+
+s.size()
+	
+
+[4,'dog']
+	
+
+2
+	
+	
+4.5. Implementing a Stack in Python
+
+Now that we have clearly defined the stack as an abstract data type we will turn our attention to using Python to implement the stack. Recall that when we give an abstract data type a physical implementation we refer to the implementation as a data structure.
+
+As we described in Chapter 1, in Python, as in any object-oriented programming language, the implementation of choice for an abstract data type such as a stack is the creation of a new class. The stack operations are implemented as methods. Further, to implement a stack, which is a collection of elements, it makes sense to utilize the power and simplicity of the primitive collections provided by Python. We will use a list.
+
+Recall that the list class in Python provides an ordered collection mechanism and a set of methods. For example, if we have the list [2,5,3,6,7,4], we need only to decide which end of the list will be considered the top of the stack and which will be the base. Once that decision is made, the operations can be implemented using the list methods such as append and pop.
+
+The following stack implementation (ActiveCode 1) assumes that the end of the list will hold the top element of the stack. As the stack grows (as push operations occur), new items will be added on the end of the list. pop operations will manipulate that same end.
+
+Remember that nothing happens when we click the run button other than the definition of the class. We must create a Stack object and then use it. ActiveCode 2 shows the Stack class in action as we perform the sequence of operations from Table 1. Notice that the definition of the Stack class is imported from the pythonds module.
+
+
+4.7. Balanced Symbols (A General Case)
+
+The balanced parentheses problem shown above is a specific case of a more general situation that arises in many programming languages. The general problem of balancing and nesting different kinds of opening and closing symbols occurs frequently. For example, in Python square brackets, [ and ], are used for lists; curly braces, { and }, are used for dictionaries; and parentheses, ( and ), are used for tuples and arithmetic expressions.
+It is possible to mix symbols as long as each maintains its own open and close relationship. Strings of symbols such as
+{ { ( [ ] [ ] ) } ( ) }
+
+[ [ { { ( ( ) ) } } ] ]
+
+[ ] [ ] [ ] ( ) { }
+
+are properly balanced in that not only does each opening symbol have a corresponding closing symbol, but the types of symbols match as well.
+
+Compare those with the following strings that are not balanced:
+
+( [ ) ]
+
+( ( ( ) ] ) )
+
+[ { ( ) ]
+
+
+4.8. Converting Decimal Numbers to Binary Numbers
+
+In your study of computer science, you have probably been exposed in one way or another to the idea of a binary number. Binary representation is important in computer science since all values stored within a computer exist as a string of binary digits, a string of 0s and 1s. Without the ability to convert back and forth between common representations and binary numbers, we would need to interact with computers in very awkward ways.
+
+Integer values are common data items. They are used in computer programs and computation all the time. 
+We learn about them in math class and of course represent them using the decimal number system, or base 10. 
+The decimal number 233 base 10
+and its corresponding binary equivalent 11101001 base 2 are interpreted respectively as
+
+2×10^2+3×10^1+3×10^0
+and
+
+1×2^7+1×2^6+1×2^5+0×2^4+1×2^3+0×2^2+0×2^1+1×2^0
+
+But how can we easily convert integer values into binary numbers? The answer is an algorithm called “Divide by 2” that uses a stack to keep track of the digits for the binary result.
+
+The Divide by 2 algorithm assumes that we start with an integer greater than 0. 
+A simple iteration then continually divides the decimal number by 2 and keeps track of the remainder. 
+The first division by 2 gives information as to whether the value is even or odd. 
+An even value will have a remainder of 0. It will have the digit 0 in the ones place. 
+An odd value will have a remainder of 1 and will have the digit 1 in the ones place. 
+We think about building our binary number as a sequence of digits; the first remainder we compute will actually be the last digit in the sequence. As shown in Figure 5, we again see the reversal property that signals that a stack is likely to be the appropriate data structure for solving the problem.
+
+
+The algorithm for binary conversion can easily be extended to perform the conversion for any base. In computer science it is common to use a number of different encodings. The most common of these are binary, octal (base 8), and hexadecimal (base 16).
+
+The decimal number 233
+and its corresponding octal and hexadecimal equivalents 3518 and E916
+
+are interpreted as
+
+3×8^2+5×8^1+1×8^0
+
+and
+
+14×16^1+9×16^0
+
+The function divideBy2 can be modified to accept not only a decimal value but also a base for the intended conversion. The “Divide by 2” idea is simply replaced with a more general “Divide by base.” A new function called baseConverter, shown in ActiveCode 2, takes a decimal number and any base between 2 and 16 as parameters. The remainders are still pushed onto the stack until the value being converted becomes 0. The same left-to-right string construction technique can be used with one slight change. Base 2 through base 10 numbers need a maximum of 10 digits, so the typical digit characters 0, 1, 2, 3, 4, 5, 6, 7, 8, and 9 work fine. The problem comes when we go beyond base 10. We can no longer simply use the remainders, as they are themselves represented as two-digit decimal numbers. Instead we need to create a set of digits that can be used to represent those remainders beyond 9.
+
+
+4.9. Infix, Prefix and Postfix Expressions
+
+When you write an arithmetic expression such as B * C, the form of the expression provides you with information so that you can interpret it correctly. In this case we know that the variable B is being multiplied by the variable C since the multiplication operator * appears between them in the expression. This type of notation is referred to as infix since the operator is in between the two operands that it is working on.
+
+Consider another infix example, A + B * C. The operators + and * still appear between the operands, but there is a problem. Which operands do they work on? Does the + work on A and B or does the * take B and C? The expression seems ambiguous.
+
+In fact, you have been reading and writing these types of expressions for a long time and they do not cause you any problem. The reason for this is that you know something about the operators + and *. Each operator has a precedence level. Operators of higher precedence are used before operators of lower precedence. The only thing that can change that order is the presence of parentheses. The precedence order for arithmetic operators places multiplication and division above addition and subtraction. If two operators of equal precedence appear, then a left-to-right ordering or associativity is used.
+
+Let’s interpret the troublesome expression A + B * C using operator precedence. B and C are multiplied first, and A is then added to that result. (A + B) * C would force the addition of A and B to be done first before the multiplication. In expression A + B + C, by precedence (via associativity), the leftmost + would be done first.
+
+Although all this may be obvious to you, remember that computers need to know exactly what operators to perform and in what order. One way to write an expression that guarantees there will be no confusion with respect to the order of operations is to create what is called a fully parenthesized expression. This type of expression uses one pair of parentheses for each operator. The parentheses dictate the order of operations; there is no ambiguity. There is also no need to remember any precedence rules.
+
+The expression A + B * C + D can be rewritten as ((A + (B * C)) + D) to show that the multiplication happens first, followed by the leftmost addition. A + B + C + D can be written as (((A + B) + C) + D) since the addition operations associate from left to right.
+
+There are two other very important expression formats that may not seem obvious to you at first. Consider the infix expression A + B. What would happen if we moved the operator before the two operands? The resulting expression would be + A B. Likewise, we could move the operator to the end. We would get A B +. These look a bit strange.
+
+These changes to the position of the operator with respect to the operands create two new expression formats, prefix and postfix. Prefix expression notation requires that all operators precede the two operands that they work on. Postfix, on the other hand, requires that its operators come after the corresponding operands. A few more examples should help to make this a bit clearer (see Table 2).
+
+A + B * C would be written as + A * B C in prefix. The multiplication operator comes immediately before the operands B and C, denoting that * has precedence over +. The addition operator then appears before the A and the result of the multiplication.
+
+In postfix, the expression would be A B C * +. Again, the order of operations is preserved since the * appears immediately after the B and the C, denoting that * has precedence, with + coming after. Although the operators moved and now appear either before or after their respective operands, the order of the operands stayed exactly the same relative to one another.
+
+
+Table 2: Examples of Infix, Prefix, and Postfix
+
+Infix Expression		Prefix Expression		Postfix Expression
+
+A + B					+ A B					A B +
+
+A + B * C				+ A * B C				A B C * +
+
+
+Now consider the infix expression (A + B) * C. Recall that in this case, infix requires the parentheses to force the performance of the addition before the multiplication. However, when A + B was written in prefix, the addition operator was simply moved before the operands, + A B. The result of this operation becomes the first operand for the multiplication. The multiplication operator is moved in front of the entire expression, giving us * + A B C. Likewise, in postfix A B + forces the addition to happen first. The multiplication can be done to that result and the remaining operand C. The proper postfix expression is then A B + C *.
+
+Consider these three expressions again (see Table 3). Something very important has happened. Where did the parentheses go? Why don’t we need them in prefix and postfix? The answer is that the operators are no longer ambiguous with respect to the operands that they work on. Only infix notation requires the additional symbols. The order of operations within prefix and postfix expressions is completely determined by the position of the operator and nothing else. In many ways, this makes infix the least desirable notation to use.
+
+Table 3: An Expression with Parentheses
+
+Infix Expression		Prefix Expression		Postfix Expression
+
+(A + B) * C				* + A B C				A B + C *
+
+
+Table 4 shows some additional examples of infix expressions and the equivalent prefix and postfix expressions. Be sure that you understand how they are equivalent in terms of the order of the operations being performed.
+Table 4: Additional Examples of Infix, Prefix, and Postfix
+
+Infix Expression				Prefix Expression			Postfix Expression
+
+A + B * C + D					+ + A * B C D				A B C * + D +
+
+(A + B) * (C + D)				* + A B + C D				A B + C D + *
+
+A * B + C * D					+ * A B * C D				A B * C D * +
+
+A + B + C + D					+ + + A B C D				A B + C + D +
