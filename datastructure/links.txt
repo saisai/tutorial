@@ -10,3 +10,5 @@ https://u.osu.edu/cstutorials/2016/11/21/7-algorithms-and-data-structures-every-
 
 https://www.youtube.com/watch?v=Q6B8k8INeq8&feature=emb_logo
 https://stackoverflow.com/questions/40255096/next-in-generators-and-iterators-and-what-is-a-method-wrapper
+
+https://runestone.academy/runestone/books/published/pythonds/BasicDS/WhatIsaDeque.html
