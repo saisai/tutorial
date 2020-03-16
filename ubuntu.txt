@@ -1,0 +1,19 @@
+remove secondary IP on interface ubuntu 19.04 permanently
+
+try this
+	systemctl disable dhcpcd.service
+	systemctl stop dhcpcd.service
+	
+if not working
+	cat /etc/netplan/50-cloud-init.yaml
+	# network: {config: disabled}
+	network:
+		ethernets:
+			enp2s0:
+				dhcp4: true
+		version: 2
+		
+	
+	change true to false
+
+https://serverfault.com/questions/975209/remove-secondary-ip-on-interface-ubuntu-19-04-permanently
