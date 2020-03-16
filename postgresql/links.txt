@@ -115,3 +115,7 @@ https://www.petefreitag.com/cheatsheets/regex/
 https://kb.objectrocket.com/postgresql/the-postgresql-cheat-sheet-part-1-976
 
 psql -U some_username -h 127.0.0.1 -d some_database
+
+https://www.learndatasci.com/tutorials/using-databases-python-postgres-sqlalchemy-and-alembic/
+
+https://github.com/dbcli/pgcli
