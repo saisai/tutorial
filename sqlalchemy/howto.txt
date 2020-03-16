@@ -1,0 +1,65 @@
+https://dba.stackexchange.com/questions/76788/create-a-mysql-database-with-charset-utf-8
+https://confluence.jetbrains.com/pages/viewpage.action?pageId=49449048
+https://confluence.jetbrains.com/display/TCD7/Configuring+UTF8+Character+Set+for+MySQL
+mysql -uroot -proot -e "create database hello character set utf8 collate utf8_general_ci;"
+
+from sqlalchemy import create_engine
+ 
+# Connecting to MySQL server at localhost using PyMySQL DBAPI
+engine = create_engine("mysql+pymysql://root:pass@localhost/mydb")
+ 
+# Connecting to MySQL server at 23.92.23.113 using mysql-python DBAPI
+engine = create_engine("mysql+mysqldb://root:pass@23.92.23.113/mydb")
+ 
+# Connecting to PostgreSQL server at localhost using psycopg2 DBAPI
+engine = create_engine("postgresql+psycopg2://root:pass@localhost/mydb")
+ 
+# Connecting to Oracle server at localhost using cx-Oracle DBAPI
+engine = create_engine("oracle+cx_oracle://root:pass@localhost/mydb")
+ 
+# Connecting to MSSQL server at localhost using PyODBC DBAPI
+engine = create_engine("oracle+pyodbc://root:pass@localhost/mydb")
+
+engine = create_engine('sqlite:///sqlite3.db') # using relative path
+engine = create_engine('sqlite:////path/to/sqlite3.db') # using absolute path
+
+
+
+https://overiq.com/sqlalchemy-101/defining-schema-in-sqlalchemy-orm/
+https://docs.sqlalchemy.org/en/13/
+
+
+https://geraldalinio.com/database/mysql/how-to-install-latest-mysql-server-on-ec2-ubuntu-18-04/
+
+sudo mysql
+CREATE USER 'myuser'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON myproddb.* TO 'myuser'@'localhost' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+ EXIT;
+ 
+ set Password on Root User
+sudo mysql 
+SELECT user,authentication_string,plugin,host FROM mysql.user;
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+FLUSH PRIVILEGES;
+SELECT user,authentication_string,plugin,host FROM mysql.user; 
+
+
+https://upcloud.com/pricing/
+
+https://www.ovh.com/world/vps/vps-ssd.xml
+
+
+https://developers.upcloud.com/1.3/13-networks/
+
+https://www.g2.com/categories/virtual-private-servers-vps
+
+https://www.g2.com/categories/virtual-private-servers-vps
+https://www.server.it/vps-promo/
+https://www.whtop.com/directory/category/vps
+https://www.freecodecamp.org/news/million-websockets-and-go-cc58418460bb/
+https://www.freecodecamp.org/news/best-react-javascript-tutorial/
+https://www.freecodecamp.org/news/best-react-javascript-tutorial/
+https://www.freecodecamp.org/news/best-git-tutorial/
+
+https://www.freecodecamp.org/news/understanding-flexbox-everything-you-need-to-know-b4013d4dc9af/
