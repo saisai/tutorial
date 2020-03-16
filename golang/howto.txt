@@ -1,0 +1,12 @@
+
+https://devops.ionos.com/libraries/go/
+mkdir -p ~/go/bin
+
+https://golang.org/doc/install
+tar -C /usr/local -xzf go$VERSION.$OS-$ARCH.tar.gz
+export PATH=$PATH:/usr/local/go/bin
+
+
+export GOPATH=~/go
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOBIN

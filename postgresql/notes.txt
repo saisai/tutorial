@@ -1,0 +1,31 @@
+sudo -u postgres psql
+CREATE DATABASE myproject;
+CREATE USER myprojectuser WITH PASSWORD 'password';
+ALTER ROLE myprojectuser SET client_encoding TO 'utf8';
+ALTER ROLE myprojectusser SET default_transaction_isolation TO 'read committed';
+ALTER ROLE myprojectuser SET timezone TO 'UTC';
+GRANT ALL PRIVILEGES ON DATABASE myproject TO myprojectuser;
+\q
+
+
+psql -U postgres
+
+To reset the password if you have forgotten:
+
+ALTER USER user_name WITH PASSWORD 'new_password';
+
+https://stackoverflow.com/questions/12720967/how-to-change-postgresql-user-password
+
+
+https://kb.objectrocket.com/postgresql/how-to-list-users-in-postgresql-782
+
+
+    The \du command will show all of the existing PostgreSQL users.
+    The \du __user_name__ command will list a specific username, if it exists.
+    The create role __rolename__ meta command will create a role against an existing PostgreSQL username.
+    The create role __user_name__ noinherit login password __the_password__ command will create a role with a username and password.
+
+    The set role __user__ command adds or changes a user role.
+
+    The grant __user1_role__ to __user2_role__ command will set user1_role to user2_role.
+
