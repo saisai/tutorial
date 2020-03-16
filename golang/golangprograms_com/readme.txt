@@ -1,2 +1,2 @@
-https://www.golangprograms.com/go-language/data-type.html
-https://www.golangprograms.com/go-language/functions.html
+https://www.golangprograms.com/go-language/golang-maps.html
+
