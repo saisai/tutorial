@@ -1,0 +1,3 @@
+pip3 install psycopg2 --user
+
+https://www.tutorialspoint.com/postgresql/postgresql_python.htm
