@@ -1,0 +1,13 @@
+https://www.liquidweb.com/kb/category/tutorials/page/8/
+
+https://developer.wordpress.org/reference/hooks/page/3/
+
+https://www.linode.com/docs/email/postfix/configure-postfix-to-send-mail-using-gmail-and-google-apps-on-debian-or-ubuntu/
+
+https://www.digitalocean.com/community/tutorials/how-to-configure-nginx-as-a-web-server-and-reverse-proxy-for-apache-on-one-ubuntu-18-04-server
+
+https://devops.ionos.com/tutorials/
+https://www.liquidweb.com/kb/how-do-i-set-up-setuid-setgid-and-sticky-bits-on-linux/
+
+http://www.theunixschool.com/p/awk-sed.html
+https://yourbasic.org/golang/regexp-cheat-sheet/
