@@ -1,0 +1,21 @@
+Alias /phppgadmin "/usr/share/phppgadmin"
+<Directory "/usr/share/phppgadmin">
+    DirectoryIndex index.php
+    AllowOverride All
+    Options FollowSymlinks
+    Require all granted
+
+    # phppgadmin raises deprecated warnings that lead
+    # to parsing errors in JS
+    php_flag display_startup_errors off
+    php_flag display_errors off
+    php_flag html_errors off
+</Directory>
+
+https://www.howtoforge.com/tutorial/ubuntu-postgresql-installation/
+https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-18-04
+https://wiki.archlinux.org/index.php/PhpPgAdmin
+
+sudo apt-get install postgresql postgresql-contrib phppgadmin
+
+https://www.postgresql.org/docs/9.5/sql-commands.html
