@@ -1,0 +1,234 @@
+ssh -l root server-ip-address
+
+adduser joe
+
+passwd joe
+
+Add the new user to the wheel group so that it can assume root privileges using sudo.
+
+gpasswd -a joe wheel
+
+
+sudo systemctl reload sshd
+
+
+sudo ln -sf /usr/share/zoneinfo/US/Eastern /etc/localtime
+
+
+dnf install mysql-server -y
+systemctl enable mysqld.service
+systemctl start mysqld.service
+mysql_secure_installation
+
+
+Would you like to setup VALIDATE PASSWORD plugin? [Y/N] N
+New password: <Your Password>
+Re-enter new password: <Your Password>
+Remove anonymous users? [Y/N] Y
+Disallow root login remotely? [Y/N] Y
+Remove test database and access to it? [Y/N] Y
+Reload privilege tables now? [Y/N] Y
+
+mysql -u root -p
+
+CREATE DATABASE polr;
+mysql>CREATE USER 'username'@'localhost' identified by 'password';
+mysql>GRANT ALL PRIVILEGES on polr.* to 'username'@'localhost';
+mysql>FLUSH PRIVILEGES;
+mysql>exit
+
+
+chown -R apache:apache /var/www/html/
+chmod -R 755 /var/www/html/
+chcon -R -t httpd_sys_rw_content_t storage .env
+
+
+
+https://www.vultr.com/docs/install-polr-on-centos-8
+
+
+https://www.vultr.com/docs/initial-setup-of-a-centos-7-server
+https://www.vultr.com/docs/correcting-network-configuration-after-snapshot-restore
+https://www.vultr.com/docs/install-polr-on-centos-8
+
+https://www.disk91.com/2015/technology/systems/move-your-httpd-apache-files-on-centos-7/
+
+
+cat /etc/centos-release
+
+Create a new non-root user account with sudo access and switch to it.
+
+useradd -c "John Doe" johndoe && passwd johndoe
+usermod -aG wheel johndoe
+su - johndoe
+
+timedatectl list-timezones
+sudo timedatectl set-timezone 'Region/City'
+
+
+Disable SELinux and Firewall.
+
+sudo setenforce 0 ; sudo systemctl stop firewalld ; sudo systemctl disable firewalld
+
+php -v
+php -m
+
+Start and enable PHP-FPM.
+
+sudo systemctl start php-fpm.service
+sudo systemctl enable php-fpm.service
+
+sudo yum install -y mariadb-server
+mysql --version
+
+
+sudo systemctl start mariadb.service
+sudo systemctl enable mariadb.service
+
+sudo mysql_secure_installation
+
+CREATE DATABASE dbname;
+GRANT ALL ON dbname.* TO 'username' IDENTIFIED BY 'password';
+FLUSH PRIVILEGES;
+exit;
+
+Run sudo vim /etc/php-fpm.d/www.conf and set the user and group to nginx. Initially, they will be set to apache.
+
+sudo vim /etc/php-fpm.d/www.conf
+# user = nginx
+# group = nginx
+
+Create /var/lib/php/session/ directory and change ownership to nginx.
+
+sudo mkdir -p /var/lib/php/session && sudo chown -R nginx:nginx /var/lib/php/session
+
+Restart the PHP-FPM service.
+
+sudo systemctl restart php-fpm.service
+
+
+https://www.vultr.com/docs/how-to-install-x-cart-5-on-centos-8
+
+https://www.vultr.com/docs/how-to-enable-tls-1-3-in-apache-on-centos-8
+
+
+
+https://www.vultr.com/docs/how-to-install-osticket-on-centos-7
+
+sudo mkdir -p /var/www/osticket
+sudo chown -R johndoe:johndoe /var/www/osticket
+
+sudo chown -R nginx:nginx /var/www/osticket
+
+sudo mkdir -p /var/lib/php/session && sudo chown -R nginx:nginx /var/lib/php/session
+
+sudo rm -rf upload/setup
+sudo chmod 0644 upload/include/ost-config.php
+
+timedatectl
+timedatectl list-timezones
+sudo timedatectl set-timezone 'Region/City'
+or
+sudo ln -sf /usr/share/zoneinfo/Asia/Bangkok /etc/localtime
+
+
+
+https://linuxconfig.org/how-to-change-timezone-on-ubuntu-18-04-bionic-beaver-linux
+https://www.vultr.com/docs/installing-fuel-cms-on-centos-7
+
+https://www.vultr.com/docs/install-tiki-wiki-cms-groupware-on-centos-7
+
+# Default umask for local users is 077. You may wish to change this to 022,
+# if your users expect that (022 is used by most other ftpd's)
+
+
+https://www.vultr.com/docs/how-to-setup-vsftpd-ftp-server-on-centos-7
+
+https://www.vultr.com/docs/deploy-kubernetes-with-kubeadm-on-centos-7
+
+Disable SELinux
+
+Since we are using CentOS we need to disable SELinux. This is necessary to allow containers access to the host filesystem.
+
+setenforce 0
+sed -i 's/^SELINUX=enforcing$/SELINUX=disable/' /etc/selinux/config
+
+Disable Swap
+
+Swap needs to be disabled to allow kubelet to work properly.
+
+sed -i '/swap/d' /etc/fstab
+swapoff -a
+
+Disable Firewall
+
+Kubernetes uses IPTables to handle inbound and outbound traffic - so to avoid any issues we disable firewalld.
+
+systemctl disable firewalld
+systemctl stop firewalld
+
+https://www.vultr.com/docs/deploy-kubernetes-with-kubeadm-on-centos-7
+
+Update IPTables
+
+Kubernetes recommends that we ensure net.bridge.bridge-nf-call-iptables is set to 1. This is due to issues where REHL/CentOS 7 has had issues with traffic being rerouted incorrectly due to bypassing iptables.
+
+cat <<EOF > /etc/sysctl.d/k8s.conf
+net.bridge.bridge-nf-call-ip6tables = 1
+net.bridge.bridge-nf-call-iptables = 1
+EOF
+sysctl --system
+
+
+https://www.vultr.com/docs/how-to-install-and-configure-memcached-on-centos-7
+yum install -y memcached libmemcached
+
+systemctl enable memcached
+
+nano /etc/sysconfig/memcached
+
+Find this line in the file:
+
+OPTIONS=""
+
+Change it to the following:
+
+OPTIONS="-l 127.0.0.1 -U 0"
+
+
+systemctl restart memcached
+systemctl status memcached
+
+ss -plunt | grep memcached
+
+memstat --servers="localhost"
+
+
+https://github.com/Attendize/Attendize
+
+https://www.vultr.com/docs/clustering-rabbitmq-on-centos-7
+
+
+https://www.digitalocean.com/community/tutorials/initial-server-setup-with-centos-8
+
+
+https://devops.ionos.com/libraries/go/
+https://golang.org/doc/install
+
+tar -C /usr/local -xzf go$VERSION.$OS-$ARCH.tar.gz
+mkdir -p ~/go/bin
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=~/go
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOBIN
+
+go env
+
+#export GOROOT=/usr/local/go
+#export PATH=$PATH:$GOROOT/bin
+
+#export GOPATH=/home/walen/golib
+#export PATH=$PATH:$GOPATH/bin
+#export GOPATH=$GOPATH:/home/walen/code
+
+
