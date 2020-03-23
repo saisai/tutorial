@@ -42,3 +42,15 @@ https://webhostinggeeks.com/howto/how-to-add-spf-record-in-bind-dns-zone-on-linu
 https://webhostinggeeks.com/howto/how-to-setup-private-dns-with-bind9-chroot-on-centos-6-2-vps/
 
 https://zurgl.com/how-to-configure-spf-in-postfix/
+
+@                      86400    IN TXT   "v=spf1 a mx ~all"
+
+OR
+
+theos.in.             IN TXT "v=spf1 a mx ~all"
+
+https://www.cyberciti.biz/faq/howto-bind-djbdns-spf-antispam-dns-configuration/
+
+$ host -t txt domain.com
+$ host -t txt nixcraft.com
+$ host -t txt nixcraft.com ns1.isp.com
