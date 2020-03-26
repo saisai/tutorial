@@ -1,0 +1,11 @@
+mkdir learnpackage
+cd learnpackage
+go mod init learnpackage
+
+mkdir simpleinterest
+
+go install
+
+
+
+https://golangbot.com/go-packages/

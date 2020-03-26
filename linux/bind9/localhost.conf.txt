@@ -1,0 +1,56 @@
+vim /var/named/chroot/var/named/ehowstuff.local
+
+;
+;       Addresses and other host information.
+;
+$TTL 14400
+ehowstuff.local.        IN      SOA     ns1.ehowstuff.local.    admin.ehowstuff.local. (
+                                        2012060201      ; Serial
+                                        86400      ; Refresh
+                                        7200       ; Retry
+                                        3600000    ; Expire
+                                        86400 )  ; Minimum
+
+;A record for domain mapping domain to IP
+ehowstuff.local.        IN      A       192.168.1.44
+
+;Define the atleast 2 private nameservers
+ehowstuff.local.        IN      NS      ns1.ehowstuff.local.
+ehowstuff.local.        IN      NS      ns2.ehowstuff.local.
+
+; Map 2 private nameservers to IP addressess using A record
+ns1     IN      A       192.168.1.44
+ns2     IN      A       192.168.1.54
+
+; Specify subdomains if any using CNAME or alias.
+www     IN      CNAME   ehowstuff.local.
+ftp     IN      CNAME   ehowstuff.local.
+
+; Mail exhanger and map it IP using A record.
+ehowstuff.local.        IN      MX      10      mail.ehowstuff.local.
+
+; SPF Record for MX.
+ehowstuff.local.        IN      TXT     "v=spf1 a mx -all"
+
+
+nslookup
+set type=txt
+ehowstuff.local
+
+https://webhostinggeeks.com/howto/how-to-add-spf-record-in-bind-dns-zone-on-linux/
+
+https://webhostinggeeks.com/howto/how-to-setup-private-dns-with-bind9-chroot-on-centos-6-2-vps/
+
+https://zurgl.com/how-to-configure-spf-in-postfix/
+
+@                      86400    IN TXT   "v=spf1 a mx ~all"
+
+OR
+
+theos.in.             IN TXT "v=spf1 a mx ~all"
+
+https://www.cyberciti.biz/faq/howto-bind-djbdns-spf-antispam-dns-configuration/
+
+$ host -t txt domain.com
+$ host -t txt nixcraft.com
+$ host -t txt nixcraft.com ns1.isp.com

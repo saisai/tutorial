@@ -1,0 +1,1 @@
+https://www.web-workers.ch/index.php/2019/10/21/how-to-configure-dkim-spf-dmarc-on-sendmail-for-multiple-domains-on-centos-7/

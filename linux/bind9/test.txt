@@ -1,0 +1,87 @@
+;; ANSWER SECTION:
+google.com.             1122    IN      NS      ns1.google.com.
+google.com.             1122    IN      NS      ns4.google.com.
+google.com.             1122    IN      NS      ns3.google.com.
+google.com.             1122    IN      NS      ns2.google.com.
+
+;; ADDITIONAL SECTION:
+ns1.google.com.         1122    IN      A       216.239.32.10
+ns1.google.com.         1122    IN      AAAA    2001:4860:4802:32::a
+ns4.google.com.         820     IN      A       216.239.38.10
+ns4.google.com.         1001    IN      AAAA    2001:4860:4802:38::a
+ns3.google.com.         1122    IN      A       216.239.36.10
+ns3.google.com.         1122    IN      AAAA    2001:4860:4802:36::a
+ns2.google.com.         1122    IN      A       216.239.34.10
+ns2.google.com.         1122    IN      AAAA    2001:4860:4802:34::a
+
+
+
+;; ANSWER SECTION:
+google.com.             234     IN      TXT     "v=spf1 include:_spf.google.com ~all"
+google.com.             234     IN      TXT     "docusign=05958488-4752-4ef2-95eb-aa7ba8a3bd0e"
+google.com.             234     IN      TXT     "globalsign-smime-dv=CDYX+XFHUw2wml6/Gb8+59BsH31KzUr6c1l2BPvqKX8="
+google.com.             234     IN      TXT     "facebook-domain-verification=22rm551cu4k0ab0bxsw536tlds4h95"
+google.com.             234     IN      TXT     "docusign=1b0a6754-49b1-4db5-8540-d2c12664b289"
+
+
+;; ANSWER SECTION:
+google.com.             87      IN      MX      50 alt4.aspmx.l.google.com.
+google.com.             87      IN      MX      40 alt3.aspmx.l.google.com.
+google.com.             87      IN      MX      30 alt2.aspmx.l.google.com.
+google.com.             87      IN      MX      10 aspmx.l.google.com.
+google.com.             87      IN      MX      20 alt1.aspmx.l.google.com.
+
+;; ADDITIONAL SECTION:
+alt4.aspmx.l.google.com. 9      IN      A       172.253.112.26
+alt3.aspmx.l.google.com. 219    IN      A       74.125.129.26
+alt2.aspmx.l.google.com. 257    IN      A       108.177.9.26
+aspmx.l.google.com.     199     IN      A       74.125.24.26
+alt1.aspmx.l.google.com. 153    IN      A       74.125.28.26
+
+
+;; QUESTION SECTION:
+;google.com.                    IN      SPF
+
+;; AUTHORITY SECTION:
+google.com.             60      IN      SOA     ns1.google.com. dns-admin.google.com. 302277541 900 900 1800 60
+
+
+;; QUESTION SECTION:
+;mail.google.com.               IN      MX
+
+;; ANSWER SECTION:
+mail.google.com.        3600    IN      CNAME   googlemail.l.google.com.
+
+;; AUTHORITY SECTION:
+l.google.com.           60      IN      SOA     ns1.google.com. dns-admin.google.com. 302277541 900 900 1800 60
+
+
+google.com.             575     IN      MX      40 alt3.aspmx.l.google.com.
+google.com.             575     IN      MX      10 aspmx.l.google.com.
+google.com.             575     IN      MX      30 alt2.aspmx.l.google.com.
+google.com.             575     IN      MX      20 alt1.aspmx.l.google.com.
+google.com.             575     IN      MX      50 alt4.aspmx.l.google.com.
+google.com.             123     IN      A       216.239.34.117
+google.com.             123     IN      A       216.239.36.117
+google.com.             123     IN      A       216.239.38.117
+google.com.             123     IN      A       216.239.32.117
+google.com.             138708  IN      NS      ns1.google.com.
+google.com.             138708  IN      NS      ns3.google.com.
+google.com.             138708  IN      NS      ns2.google.com.
+google.com.             138708  IN      NS      ns4.google.com.
+
+
+
+;; QUESTION SECTION:
+;amazon.com.                    IN      TXT
+
+;; ANSWER SECTION:
+amazon.com.             900     IN      TXT     "google-site-verification=9vpzZueNucS8hPqoGpZ5r10Nr2_sLMRG3AnDtNlucc4"
+amazon.com.             900     IN      TXT     "google-site-verification=14WGW2MdNMxchG8PlinF7LgqqE0OwwHqOq0HKhb7rDQ"
+amazon.com.             900     IN      TXT     "MS=4B600B22799EB2CAC0D8FF0A3A3CAECA5EE2BF3A"
+amazon.com.             900     IN      TXT     "facebook-domain-verification=d9u57u52gylohx845ogo1axzpywpmq"
+amazon.com.             900     IN      TXT     "spf2.0/pra include:spf1.amazon.com include:spf2.amazon.com include:amazonses.com -all"
+amazon.com.             900     IN      TXT     "v=spf1 include:spf1.amazon.com include:spf2.amazon.com include:amazonses.com -all"
+
+
+

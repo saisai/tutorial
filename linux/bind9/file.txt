@@ -1,0 +1,24 @@
+$ORIGIN cyberciti.biz
+$TTL 86400
+@ IN SOA ns1.cyberciti.biz. vivek.cyberciti.biz. (
+                       2008020302        ; Serial
+                       3600              ; Refresh
+                       300               ; Retry
+                       604800            ; Expire
+                       3600)             ; Minimum
+
+@                      86400    IN NS    ns1.cyberciti.biz.
+@                      86400    IN NS    ns2.cyberciti.biz.
+
+@                      3600     IN MX 10 smtp.cyberciti.biz.
+
+@                      86400    IN TXT   "v=spf1 ip4:74.86.49.128/28 a mx ~all"
+feeds                  86400    IN CNAME feeds.feedburner.com.
+*                      3600     IN A     74.86.49.130
+@                      86400    IN A     74.86.49.130
+rd                     86400    IN A     74.86.49.130
+www                    3600     IN A     74.86.49.130
+vpn		       86400    IN A     10.10.2.5
+
+https://www.cyberciti.biz/faq/howto-bind-djbdns-spf-antispam-dns-configuration/
+https://www.cyberciti.biz/faq/bind-named-djbdns-google-apps-sender-policy-framework/

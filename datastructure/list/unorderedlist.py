@@ -1,4 +1,5 @@
 
+# https://codereview.stackexchange.com/questions/156906/python-linked-list-implementation
 from node import Node
 
 class UnorderedList:
@@ -48,8 +49,12 @@ class UnorderedList:
             previous.setNext(current.getNext())
             
     def __iter__(self):
-        return self 
-        
+        current = self.head
+        while current is not None:
+            yield current.getData()
+            current = current.getNext()
+    
+    '''
     def __next__(self):
         current = self.head
         if current:
@@ -59,7 +64,7 @@ class UnorderedList:
             return item
         else:
             raise StopIteration
-            
+    '''        
         
         
 
@@ -90,3 +95,4 @@ if __name__ == '__main__':
     print(mylist.size())
     print(mylist.search(93))
     print(list(mylist))
+
