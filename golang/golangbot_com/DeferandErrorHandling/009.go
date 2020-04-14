@@ -1,0 +1,22 @@
+package main
+
+import (
+    "fmt"
+    "net"
+)
+
+func main() {
+    add, err := net.LookupHost("golangbot123.com")
+    if err, ok := err.(*net.DNSError); ok {
+
+        if err.Timeout() {
+            fmt.Println("operation timed out")
+        }else if err.Temporary() {
+            fmt.Println("tempoaray error")
+        } else {
+            fmt.Println("generic error: ", err)
+        }
+        return
+    }
+    fmt.Println(add)
+}
