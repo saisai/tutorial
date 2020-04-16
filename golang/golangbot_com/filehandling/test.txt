@@ -1,0 +1,120 @@
+Hello
+
+This message was identified as junk. It's not junk
+apply <apply@nyeinpe.xyz>
+Thu 4/16/2020 10:23 AM
+Forward
+More actions
+How are you?
+Received: from BN8NAM12HT177.eop-nam12.prod.protection.outlook.com
+(2603:1096:202:2e::23) by HK2PR04MB3604.apcprd04.prod.outlook.com with HTTPS
+via HK2PR06CA0011.APCPRD06.PROD.OUTLOOK.COM; Thu, 16 Apr 2020 03:23:30 +0000
+Received: from BN8NAM12FT048.eop-nam12.prod.protection.outlook.com
+(2a01:111:e400:fc66::51) by
+BN8NAM12HT177.eop-nam12.prod.protection.outlook.com (2a01:111:e400:fc66::67)
+with Microsoft SMTP Server (version=TLS1_2,
+cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2921.12; Thu, 16 Apr
+2020 03:23:29 +0000
+Authentication-Results: spf=pass (sender IP is 45.76.180.127)
+smtp.mailfrom=nyeinpe.xyz; outlook.com; dkim=pass (signature was verified)
+header.d=nyeinpe.xyz;outlook.com; dmarc=pass action=none
+header.from=nyeinpe.xyz;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of nyeinpe.xyz designates
+45.76.180.127 as permitted sender) receiver=protection.outlook.com;
+client-ip=45.76.180.127; helo=mail.nyeinpe.xyz;
+Received: from mail.nyeinpe.xyz (45.76.180.127) by
+BN8NAM12FT048.mail.protection.outlook.com (10.13.182.214) with Microsoft SMTP
+Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+15.20.2921.12 via Frontend Transport; Thu, 16 Apr 2020 03:23:28 +0000
+X-IncomingTopHeaderMarker:
+OriginalChecksum:8894D664AA6789959013F9EC3844249267F0F5215E4F04D207544569F2D1C539;UpperCasedChecksum:3CFFADB0082E713B299696E706E6C8B0D65B6A072DDAEE41377E8DC24D9973BC;SizeAsReceived:1088;Count:12
+Received: from nyeinpe.xyz (mail.nyeinpe.xyz [45.76.180.127])
+by mail.nyeinpe.xyz (Postfix) with ESMTPA id 0BEF52038C
+for <nyeinpe@outlook.com>; Thu, 16 Apr 2020 10:23:27 +0700 (+07)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=nyeinpe.xyz;
+s=myselector; t=1587007407;
+bh=qLKbpaSndNO6Wp/cm+OE7R8kTAxUkYfIjerX8SOSVtc=;
+h=Date:From:To:Subject;
+b=rj5VysZc+FbxTLWShRkONz4kQwdeH4S9szJt1lXeAJtEhDW+leLg6fqgKF6w4+W+n
+sYQVCx9FKEk+eQueUxn8JuhjdWQfBhYLrEcPpaQkhvUfgSpi5L6FkJ899TDxx/WZ+6
+OoOK/03RpmjyBUcTyVV1qs60bxdvjVuZCXJ51J5MIVR+rCs/W1mZsQA+mCvfO4Njym
+rjVlQ35aZ4N0C6LQJ8BenCAU+VMDUtPy2cAP8xgvK8I2rygjOvVbOUxcP6myWt437n
+HV42hNvh+5iuUjjZvBkldWppJnKHrWX/VA6u7j6fMqMHmfech9QJYZDtgPJJ1ofRyp
+JzN1htiLHiYvA==
+Date: Thu, 16 Apr 2020 10:23:26 +0700
+From: apply <apply@nyeinpe.xyz>
+To: nyeinpe@outlook.com
+Subject: Hello
+User-Agent: Roundcube Webmail/1.4.3
+Message-ID: <35155a1c2ef391282a1dc048883c3bbc@nyeinpe.xyz>
+X-Sender: apply@nyeinpe.xyz
+Content-Type: text/plain; charset=US-ASCII;
+format=flowed
+Content-Transfer-Encoding: 7bit
+X-IncomingHeaderCount: 12
+Return-Path: apply@nyeinpe.xyz
+X-MS-Exchange-Organization-ExpirationStartTime: 16 Apr 2020 03:23:28.9236
+(UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+271ed659-66dc-457e-67d2-08d7e1b5885b
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report:
+CIP:45.76.180.127;CTRY:SG;LANG:en;SCL:0;SRV:;IPV:NLI;SFV:NSPM;H:mail.nyeinpe.xyz;PTR:mail.nyeinpe.xyz;CAT:NONE;SFTY:;SFS:;DIR:INB;SFP:;
+X-MS-Exchange-Organization-AuthSource:
+BN8NAM12FT048.eop-nam12.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-UserLastLogonTime: 4/16/2020 3:06:40 AM
+X-MS-Office365-Filtering-Correlation-Id: 271ed659-66dc-457e-67d2-08d7e1b5885b
+X-MS-TrafficTypeDiagnostic: BN8NAM12HT177:
+X-MS-Exchange-EOPDirect: true
+X-Sender-IP: 45.76.180.127
+X-SID-PRA: APPLY@NYEINPE.XYZ
+X-SID-Result: PASS
+X-MS-Exchange-Organization-PCL: 2
+X-MS-Exchange-Organization-SCL: 0
+X-Microsoft-Antispam: BCL:0;
+X-OriginatorOrg: outlook.com
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 16 Apr 2020 03:23:28.6697
+(UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 271ed659-66dc-457e-67d2-08d7e1b5885b
+X-MS-Exchange-CrossTenant-Id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg:
+00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN8NAM12HT177
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.8800696
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.2900.027
+X-Microsoft-Antispam-Mailbox-Delivery:
+abwl:0;wl:0;pcwl:0;kl:0;iwl:0;dwl:0;dkl:0;rwl:0;ucf:0;jmr:0;ex:0;auth:1;dest:J;OFR:SpamFilterAuthJ;ENG:(5062000262)(9000001)(9015001)(9030002)(5061607266)(5061608174)(4900115)(4920090)(6375004)(4950130)(4990090)(9140004);RF:JunkEmail;
+X-Message-Info:
+qoGN4b5S4yr/57xN1261og+/puRDDgHkOvhagyjtswn87wP/seSHT35z+Esaq9clyaGNBLClStn+DFyKpa5lcLerxD4goJJI+hH5OC5CTyeApvUEZKz1jVaP4+7w7BeVDmKGEBC6CG9mrST96Ts+Yj6BlDQuymAq06WcOcrUpjL8Yk+qJSobVV4s467uDH6e/uONyTQ4+lRUTVEXfqeX7Q==
+X-Message-Delivery: Vj0xLjE7dXM9MDtsPTA7YT0wO0Q9MjtHRD0yO1NDTD02
+X-Microsoft-Antispam-Message-Info:
+=?us-ascii?Q?0OFv+Fxm5pgaW6sypQ/QVdj73HHxto1NUw7UWUKerwlcDYlX1TngUUMBeysi?=
+=?us-ascii?Q?E/bZ9FwkLRBwdQ30KmAw01y7MJqAHZnxaukT+qZBEYSyH5Tu78OXgbRw40BX?=
+=?us-ascii?Q?63VnJa2lY4eYPt+8wNfvdl0koqyhTOuQsc70SBHarY47dfAVHxw3GYsPS1P+?=
+=?us-ascii?Q?trDtmaQzfgT5JBu394OknQSbC/1t9p4JQ1gNTBP0oTImO+rqMHJ1M1CcAtUe?=
+=?us-ascii?Q?8577CqJVwJlGWEWqoqKg6hHcZvFD5iApCVhUWsS8dhixXUh/HPUDfjDHfmRH?=
+=?us-ascii?Q?+T+bb+QtWVumN2akfyjoUfpLgojTDDYsfiMDAtqZsFm38x2jw5W+J9ca9Ovy?=
+=?us-ascii?Q?DnGE8Oq52YLC1Buvl9hb2P867NZvO9dtf4KKgXi7XsCd11HBzBH0m0CWXApY?=
+=?us-ascii?Q?Gs+oAv7PqDhXtRfKBYPGksqQB8WLDgepRvOznWqhnPlh7/cfHtkzxQPW5ovC?=
+=?us-ascii?Q?2ieUhVZjIRO+qBcBRHmKlOIDaep7lCzenxH9tjpMAYEspJsUK+Ax4gKy9vO/?=
+=?us-ascii?Q?GgLUVrN9/qUTOOKqbh+UqcGhKLqrqyUIsSCULfklrZ+ybPXJ2XxA6Ra2PlK7?=
+=?us-ascii?Q?ac1N6S4LpLIS6Ml7v/TVJ1D0lXWmyUb3Ytk2VkKXqDPyl3pML2ZKN9JzUDcI?=
+=?us-ascii?Q?cniOA2gednYDhhXTgyWMOVaZNGUEgmAuBQuHmxYDjHdmbi/1U7OLFa4hQilB?=
+=?us-ascii?Q?LqicV1HTMnnjoi3IrhoCojWzfx2GvVzRSto8V0IBkzonohwgQsAlw2Y90KUo?=
+=?us-ascii?Q?8SAW8IHFFn20mnZzg+Dsmkb1Wq3my4CI6BnZyxZs2I7H0sXu4fozlSitKrZZ?=
+=?us-ascii?Q?BPMNfdN83J3WCp7KXeugeITRUXX07h0B85jOVx6dbPnLnFY3cHeS2Cv/7/W/?=
+=?us-ascii?Q?QlV2CjUiE9wpKlUSoCD2TqPho/NFuzLO24MZWfbWHeXjcajZP4oiBjt0PXlY?=
+=?us-ascii?Q?4srQxUjGdnnwKFGt3wX7l0M1BCN7EyQU1CyLXGAqAZvD5dBW87p/rrs3/O8P?=
+=?us-ascii?Q?9AQHcygB5iFUFs+0AAlNGcHzo5kPL77Eumz+BaFBdDZqbIA=3D?=
+MIME-Version: 1.0
+
+How are you?
+
