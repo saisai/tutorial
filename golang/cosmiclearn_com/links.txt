@@ -1,1 +1,1 @@
-https://www.cosmiclearn.com/go/conditionals.php
+https://www.cosmiclearn.com/go/interfaces.php
