@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    </head>
+    <body>
+        <div>test</div>
+        <a href="https://google.com">Google</a><br />
+        <a class="swedberg" href="https://facebook.com">Facebook</a>
+        <div id="magic"> hi </div>
+        <script>
+            (function ( $ ){
+                $.fn.greenify = function( options ) {
+                    var settings = $.extend ({
+                        color: "#556b2f",
+                        backgroundColor: "white"
+                    }, options);
+
+                    // grennify the collection based on the settins variable.
+                    return this.css({
+                        color: settings.color,
+                        backgroundColor: settings.backgrounColor
+                    });
+                };
+            }(jQuery));
+
+            $("div").greenify({
+                color: "orange"
+            });
+
+            (function ( $  ){
+
+                $.fn.showLinkLocation = function() {
+                    this.filter( "a" ).each(function() {
+                        var link = $( this );
+                        link.append( " (" + link.attr ("href")+")");
+
+                    });
+
+                    return this;
+                };
+            }(jQuery));
+
+            $("a").showLinkLocation();
+
+            $("<style type=\"text/css\">a.swedberg { color: #0769ad }</style>").appendTo( "head" )
+
+            var PI = {
+
+            onReady: function() {
+                $( "#magic" ).click( PI.hello );
+
+
+            },
+
+            hello: function() {
+                alert("hello");
+            }
+            };
+
+            $( document ).ready( PI.onReady );
+        </script>
+
+    </body>
+</html>
