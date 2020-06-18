@@ -1,5 +1,8 @@
 #!/usr/bin/bash
 
+find . -name "*.so" -exec ls -lv {} \;
+find . -name "*.so" -exec rm -rfv {} \;
+
 find . -name "*.out" -exec ls -lv {} \;
 find . -name "*.out" -exec rm -rfv {} \;
 
