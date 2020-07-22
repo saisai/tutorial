@@ -1,0 +1,45 @@
+JSON - Introduction
+
+JSON: JavaScript Object Notation.
+
+JSON is a syntax for storing and exchanging data.
+
+JSON is text, written with JavaScript object notation.
+
+Exchanging Data
+When exchanging data between a browser and a server, the data can only be text.
+
+JSON is text, and we can convert any JavaScript object into JSON, and send JSON to the server.
+
+We can also convert any JSON received from the server into JavaScript objects.
+
+This way we can work with the data as JavaScript objects, with no complicated parsing and translations.
+
+Sending Data
+If you have data stored in a JavaScript object, you can convert the object into JSON, and send it to a server:
+
+var myObj = {name: "John", age: 31, city: "New York"};
+var myJSON = JSON.stringify(myObj);
+window.location = "demo_json.php?x=" + myJSON;
+
+
+Receiving Data
+If you receive data in JSON format, you can convert it into a JavaScript object:
+
+var myJSON = '{"name":"John", "age":31, "city":"New York"}';
+var myObj = JSON.parse(myJSON);
+document.getElementById("demo").innerHTML = myObj.name;
+
+*
+JSON uses JavaScript syntax, but the JSON format is text only.
+Text can be read and used as a data format by any programming language.
+
+Convert json text(javascript object text) to json text.
+myObj = {name: "John", age: 31, city: "New York"};
+myJSON = JSON.stringify(myObj);
+myJSON = '{"name": "John", "age": 31, "city": "New York"}';
+
+Convert  json text (javascript object text) to object (javascript object)
+Obj = JSON.parse(myJson);
+myObj = Obj => {name: "John", age: 31, city: "New York"};
+

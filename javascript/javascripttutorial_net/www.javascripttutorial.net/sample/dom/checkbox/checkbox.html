@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Checkbox</title>
+</head>
+<body>
+    <form>
+        <input type="checkbox" id="accept" checked> Accept
+        <input type="button" id="btn" value="Submit">
+    </form>
+    <script>
+        const cb = document.querySelector('#accept');
+        const btn = document.querySelector('#btn');
+        btn.onclick = () => {
+            const result = cb.value;
+            alert(result); // on
+        };
+    </script>
+</body>
+</html>

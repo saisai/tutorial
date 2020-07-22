@@ -3,3 +3,5 @@ https://www.archlinux.org/packages/extra/x86_64/python/files/
 
 # how to run setup.py to compile c file 
 python setup.py build_ext --inplace
+
+https://github.com/dabeaz/python-cookbook/tree/master/src/15

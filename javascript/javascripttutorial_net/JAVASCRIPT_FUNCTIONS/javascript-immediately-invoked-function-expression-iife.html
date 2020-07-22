@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript IIFE - jQuery</title>
+</head>
+<body>
+  <h1>jQuery Demo</h1>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.js"
+    integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI=" crossorigin="anonymous"></script>
+  <script>
+	/*
+    let counterr = 1;
+
+    $('h1').click(function () {
+      $(this).text('jQuery Demo' + ' Clicked ' + counter++);
+    });
+	*/
+	
+(function (_) {
+      let counter = 1;
+      _('h1').click(function () {
+        _(this).text('jQuery Demo' + ' Clicked ' + counter++);
+      });
+  })(jQuery);	
+	
+  </script>
+
+<script>
+function add(a, b) {
+    return a + b;
+
+}
+
+console.log(window.add);
+
+var counter = 10;
+console.log(window.counter);
+
+let adder = (function(a,b){
+    return a + b;
+})(10, 20);
+
+console.log(adder);
+console.log(window.adder);
+console.log(window.add(10, 10));
+
+(function(a,b){
+        console.log( a + b);
+})(10,20);
+
+(function() {
+    var counter = 0;
+
+    function addtest(a, b) {
+        return a + b;
+    }
+
+    console.log(addtest(10,20)); // 30
+}());
+
+console.log(window.addtest);
+
+(function namedIIFE() {
+    //..
+	console.log('hello');
+})();
+// error
+// Uncaught ReferenceError: namedIIFE is not defined
+//namedIIFE();
+
+const calculator = (function () {
+    function add(a, b) {
+        return a + b;
+    }
+
+    function multiply(a, b) {
+        return a * b;
+    }
+    return {
+        add: add,
+        multiply: multiply
+    }
+})();
+
+  let result = calculator.add(10, 20); // add in app.js
+    console.log(result); // 30
+    //console.log(add()); // add in the app.js
+</script>
+</body>
+</html>
