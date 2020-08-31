@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JS CreateElement Demo</title>
+</head>
+<body>
+<ul id="menu">
+    <li>Home</li>
+</ul>
+    <script>
+        let div = document.createElement('div');
+        div.id = 'content';
+		div.class = 'note';
+        div.innerHTML = '<p>CreateElement example</p>';
+		
+		// create a new text node and add it to the div
+		let text = document.createTextNode('CreateElement example 2');
+		div.appendChild(text);
+		
+		// create a new heading and add it to the div
+		let h2 = document.createElement('h2');
+		h2.textContent = 'Add h2 element to the div';
+		div.appendChild(h2);		
+		
+        document.body.appendChild(div);
+		
+		const menu = document.querySelector('#menu');
+let li = document.createElement('li');
+li.textContent = 'Products';
+menu.appendChild(li);
+
+li = document.createElement('li');
+li.textContent = 'About Us';
+
+// select the ul menu element
+
+menu.appendChild(li);		
+    </script>
+</body>
+</html>

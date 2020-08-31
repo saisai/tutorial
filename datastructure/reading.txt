@@ -1,0 +1,13 @@
+https://www.programiz.com/dsa/bucket-sort
+
+https://cppsecrets.com/users/17211410511511610510710997106117109100971144964103109971051084699111109/Python-program-for-bucket-sort-algorithm.php
+
+https://www.sanfoundry.com/python-program-implement-bucket-sort/
+
+https://morioh.com/p/87c347af8f6c
+
+https://www.codespeedy.com/implementation-of-bucket-sort-in-python/
+
+https://www.growingwiththeweb.com/2015/06/bucket-sort.html
+
+https://www.tutorialandexample.com/bucket-sort/
