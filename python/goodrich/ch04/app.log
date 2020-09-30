@@ -1,0 +1,41 @@
+2020-07-04 17:13:44,339 - __main__ - <module> - INFO - hell
+2020-07-04 17:14:07,857 - __main__ - <module> - INFO - hell
+2020-07-04 17:15:42,102 - __main__ - <module> - INFO - 8
+2020-07-04 17:15:45,078 - __main__ - <module> - INFO - 8
+2020-07-04 17:15:46,372 - __main__ - <module> - INFO - 8
+2020-07-04 17:16:02,443 - __main__ - <module> - INFO - 8
+2020-07-04 17:18:28,738 - __main__ - <module> - INFO - 8
+2020-07-04 17:18:40,954 - __main__ - <module> - INFO - 8
+2020-07-04 17:18:40,955 - __main__ - <module> - INFO - 1073741824
+2020-07-04 17:18:42,732 - __main__ - <module> - INFO - 8
+2020-07-04 17:18:42,733 - __main__ - <module> - INFO - 1073741824
+2020-07-04 19:36:45,020 - __main__ - <module> - INFO - [0, 1, 2, 3, 4, 5, 6, 7, 8]
+2020-07-04 19:36:57,675 - __main__ - <module> - INFO - [1, 2, 3, 4, 5, 6, 7, 8]
+2020-07-04 19:38:05,695 - __main__ - <module> - INFO - 36
+2020-07-04 19:38:07,484 - __main__ - <module> - INFO - 36
+2020-07-04 19:38:08,500 - __main__ - <module> - INFO - 36
+2020-07-04 19:38:26,567 - __main__ - binary_sum - INFO - 1
+2020-07-04 19:38:26,568 - __main__ - binary_sum - INFO - 2
+2020-07-04 19:38:26,568 - __main__ - binary_sum - INFO - 3
+2020-07-04 19:38:26,568 - __main__ - binary_sum - INFO - 4
+2020-07-04 19:38:26,568 - __main__ - binary_sum - INFO - 5
+2020-07-04 19:38:26,569 - __main__ - binary_sum - INFO - 6
+2020-07-04 19:38:26,569 - __main__ - binary_sum - INFO - 7
+2020-07-04 19:38:26,569 - __main__ - binary_sum - INFO - 8
+2020-07-04 19:38:26,569 - __main__ - <module> - INFO - 36
+2020-07-04 19:38:53,197 - __main__ - binary_sum - INFO - mid 4 
+2020-07-04 19:38:53,198 - __main__ - binary_sum - INFO - mid 2 
+2020-07-04 19:38:53,198 - __main__ - binary_sum - INFO - mid 1 
+2020-07-04 19:38:53,199 - __main__ - binary_sum - INFO - 1
+2020-07-04 19:38:53,199 - __main__ - binary_sum - INFO - 2
+2020-07-04 19:38:53,199 - __main__ - binary_sum - INFO - mid 3 
+2020-07-04 19:38:53,200 - __main__ - binary_sum - INFO - 3
+2020-07-04 19:38:53,200 - __main__ - binary_sum - INFO - 4
+2020-07-04 19:38:53,200 - __main__ - binary_sum - INFO - mid 6 
+2020-07-04 19:38:53,200 - __main__ - binary_sum - INFO - mid 5 
+2020-07-04 19:38:53,200 - __main__ - binary_sum - INFO - 5
+2020-07-04 19:38:53,200 - __main__ - binary_sum - INFO - 6
+2020-07-04 19:38:53,200 - __main__ - binary_sum - INFO - mid 7 
+2020-07-04 19:38:53,200 - __main__ - binary_sum - INFO - 7
+2020-07-04 19:38:53,200 - __main__ - binary_sum - INFO - 8
+2020-07-04 19:38:53,200 - __main__ - <module> - INFO - 36

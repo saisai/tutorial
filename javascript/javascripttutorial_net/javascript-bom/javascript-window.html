@@ -1,0 +1,37 @@
+
+<p>JavaScript setTimeout Demo</p>
+<button onclick="showAlert();">Show</button>
+<button onclick="cancelAlert();">Cancel</button>
+<script>
+var counter = 1;
+var showCounter = () => console.log(counter);
+
+console.log(window.counter);
+window.showCounter();
+
+const width = window.innerWidth
+|| document.documentElement.clientWidth
+|| document.body.clientWidth;
+
+const height = window.innerHeight
+|| document.documentElement.clientHeight
+|| document.body.clientHeight; 
+
+console.log(width);
+console.log(height);
+
+setTimeout(() => {
+    //alert('3 seconds has been passed!')
+    console.log('3 seconds has been passed!')
+}, 3000);
+
+var timeoutID;
+
+function showAlert() {
+    timeoutID = setTimeout(alert, 3000, 'setTimeout Demo!');
+}
+
+function cancelAlert() {
+    clearTimeout(timeoutID);
+}
+</script>

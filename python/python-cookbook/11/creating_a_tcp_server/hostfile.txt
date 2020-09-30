@@ -1,0 +1,78 @@
+<VirtualHost *:80>
+    ServerName www.localhost.local
+    ServerAlias localhost.local
+    DocumentRoot /var/www/website.com/html
+
+    <Directory "/var/www/website.com/html/">
+        #
+        # Possible values for the Options directive are "None", "All",
+        # or any combination of:
+        #   Indexes Includes FollowSymLinks SymLinksifOwnerMatch ExecCGI MultiViews
+        #
+        # Note that "MultiViews" must be named *explicitly* --- "Options All"
+        # doesn't give it to you.
+        #
+        # The Options directive is both complicated and important.  Please see
+        # http://httpd.apache.org/docs/2.4/mod/core.html#options
+        # for more information.
+        #
+        DirectoryIndex index.php index.html index.htm
+        Options Indexes FollowSymLinks
+
+        #
+        # AllowOverride controls what directives may be placed in .htaccess files.
+        # It can be "All", "None", or any combination of the keywords:
+        #   AllowOverride FileInfo AuthConfig Limit
+        #
+        #AllowOverride None
+        AllowOverride All
+        #
+        # Controls who can get stuff from this server.
+        #
+        Require all granted
+    </Directory>
+    ErrorLog /var/www/website.com/log/error.log
+    CustomLog /var/www/website.com/log/requests.log combined
+</VirtualHost>
+
+
+<VirtualHost *:443>
+    ServerName www.thaiwalen.dev
+    ServerAlias thaiwalen.dev
+    DocumentRoot /mnt/working/thaiwalen.dev
+
+    <Directory "/mnt/working/thaiwalen.dev">
+        #
+        # Possible values for the Options directive are "None", "All",
+        # or any combination of:
+        #   Indexes Includes FollowSymLinks SymLinksifOwnerMatch ExecCGI MultiViews
+        #
+        # Note that "MultiViews" must be named *explicitly* --- "Options All"
+        # doesn't give it to you.
+        #
+        # The Options directive is both complicated and important.  Please see
+        # http://httpd.apache.org/docs/2.4/mod/core.html#options
+        # for more information.
+        #
+        DirectoryIndex index.php index.html index.htm
+        Options Indexes FollowSymLinks
+
+        #
+        # AllowOverride controls what directives may be placed in .htaccess files.
+        # It can be "All", "None", or any combination of the keywords:
+        #   AllowOverride FileInfo AuthConfig Limit
+        #
+        #AllowOverride None
+        AllowOverride All
+        #
+        # Controls who can get stuff from this server.
+        #
+        Require all granted
+    </Directory>
+	SSLEngine on
+    SSLCertificateFile "/etc/httpd/conf/server.crt"
+    SSLCertificateKeyFile "/etc/httpd/conf/server.key"
+    ErrorLog /mnt/working/thaiwalen.dev/log/error.log
+    CustomLog /mnt/working/thaiwalen.dev/log/requests.log combined
+</VirtualHost>
+

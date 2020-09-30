@@ -1,0 +1,7 @@
+HashTable
+https://github.com/coells/100days
+https://medium.com/100-days-of-algorithms/day-71-hash-table-chaining-c417b7cf4de6
+https://stackoverflow.com/questions/28442041/chain-hash-table-insert-function
+https://leetcode.com/problems/design-hashmap/discuss/185347/hash-with-chaining-python
+
+https://runestone.academy/runestone/books/published/pythonds/SortSearch/Hashing.html

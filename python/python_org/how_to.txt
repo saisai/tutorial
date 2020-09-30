@@ -1,0 +1,13 @@
+In Python, how do I determine if an object is iterable?
+Is there a method like isiterable? The only solution I have found so far is to call
+
+hasattr(myObj, '__iter__')
+
+https://www.semicolonworld.com/question/43113/in-python-how-do-i-determine-if-an-object-is-iterable
+
+>>> from collections.abc import Iterable # for python >= 3.6
+>>> l = [1, 2, 3, 4]
+>>> isinstance(l, Iterable)
+
+
+https://stackoverflow.com/questions/4668621/how-to-check-if-an-object-is-iterable-in-python?lq=1

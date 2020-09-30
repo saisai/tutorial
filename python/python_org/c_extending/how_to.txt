@@ -1,0 +1,57 @@
+https://docs.python.org/3/extending/extending.html
+
+https://jmpews.github.io/2016/12/10/python/%E4%B8%BApython%E5%86%99C%E7%9A%84%E6%89%A9%E5%B1%95/
+
+#include "Python.h"
+static PyObject *SpamError;
+static PyObject *
+spam_system(PyObject *self,PyObject *args)
+{
+    const char *command;
+    int sts;
+    if(!PyArg_ParseTuple(args,"s",&command))
+        return NULL;
+    sts=system(command);
+    if(sts<0)
+    {
+        PyErr_SetString(SpamError,"System command failed");   
+        return NULL;
+    }
+    return PyLong_FromLong(sts);
+}
+static PyMethodDef SpamMethods[]={
+    {"system",spam_system,METH_VARARGS,"Execute a shell command."},
+    {NULL,NULL,0,NULL}
+};
+static struct PyModuleDef spammodule = {
+    PyModuleDef_HEAD_INIT,
+    "spam",
+    NULL,
+    -1,
+    SpamMethods
+};
+PyMODINIT_FUNC
+PyInit_spam(void)
+{
+    PyObject *m;
+    m = PyModule_Create(&spammodule);
+    if(m==NULL)
+        return NULL;
+    SpamError = PyErr_NewException("spam.error",NULL,NULL);
+    Py_INCREF(SpamError);
+    PyModule_AddObject(m,"error",SpamError);
+    return m;
+}
+
+
+from distutils.core import setup,Extension
+moduleone=Extension('spam',sources=['spammodule.c'])
+setup(name='spam',
+    version='1.0',
+    description='This is spam',
+    ext_modules=[moduleone]
+)
+
+ python setup.py build_ext --inplace
+ 
+ http://www-h.eng.cam.ac.uk/help/languages/python/python_and_C.html

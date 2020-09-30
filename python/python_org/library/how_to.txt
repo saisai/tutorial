@@ -1,0 +1,9 @@
+http://www.pythonlake.com/python/itertools/itertoolscycle
+
+http://www.pythonlake.com/python/itertools/itertoolsdropwhile
+
+https://realpython.com/python-itertools/
+
+https://thispointer.com/python-how-to-add-append-key-value-pairs-in-dictionary-using-dict-update/
+
+https://docs.python.org/3.8/library/itertools.html#itertools.count

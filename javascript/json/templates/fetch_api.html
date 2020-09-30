@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Get data as JSON from a PHP file, and convert it into a JavaScript array.</h2>
+
+<p id="demo"></p>
+
+<script>
+/*
+fetch('http://192.168.0.150:3000/fetch_api_test').then(function(response){
+	alert(response.text());
+	alert(response.json());
+	
+})
+*/
+
+fetch('https://api.github.com/users/KrunalLathiya')
+fetch('http://192.168.0.150:3000/fetch_api_test')
+.then(response => response.json())
+.then(data => {
+  console.log(data) // Prints result from `response.json()` in getRequest
+  document.getElementById("demo").innerHTML = data[2];
+})
+.catch(error => console.error(error))
+
+//alert(response);
+//let commits = await response.json();
+//alert(commits);
+/*
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    var myObj = JSON.parse(this.responseText);
+    document.getElementById("demo").innerHTML = myObj[2];
+  }
+};
+xmlhttp.open("GET", "/demo_file_array_test", true);
+xmlhttp.send();
+*/
+</script>
+
+</body>
+</html>

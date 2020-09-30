@@ -1,0 +1,5 @@
+https://www.w3schools.com/js/js_best_practices.asp
+
+http://www.ecma-international.org/ecma-262/5.1/#sec-11.9.6
+
+https://www.javascripttutorial.net/javascript-array-sort/

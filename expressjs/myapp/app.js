@@ -2,7 +2,7 @@ const express = require('express')
 const path = require('path')
 const app = express()
 const port = 3000
-const host = '192.168.0.222'
+const host = '192.168.0.150'
 //app.get('/', (req, res) => res.send('Hello World!'))
 
 //app.listen(port, host, () => console.log(`Example app listening on port ${port}!`))
