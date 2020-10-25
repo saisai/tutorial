@@ -1,0 +1,5 @@
+https://codereview.stackexchange.com/questions/231397/simple-producer-consumer-implementation-in-python
+https://melvinkoh.me/solving-producerconsumer-problem-of-concurrent-programming-in-python-ck3bqyj1j00i8o4s1cqu9mfi7
+https://realpython.com/lessons/two-threads/
+https://techmonger.github.io/55/producer-consumer-python/
+https://www.meccanismocomplesso.org/en/thread-in-python-the-producer-consumer-model-part-5/
