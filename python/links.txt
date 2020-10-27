@@ -3,3 +3,7 @@ https://www.programiz.com/python-programming/datetime/current-time
 https://pip.pypa.io/en/stable/installing/
 https://github.com/pypa/pip/blob/master/noxfile.py
 https://github.com/pypa/pip/blob/master/noxfile.py
+
+
+https://www.accelebrate.com/blog/using-defaultdict-python
+https://www.hackerrank.com/challenges/itertools-permutations/problem
