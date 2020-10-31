@@ -1,11 +1,13 @@
 import functools
 
+
 class MyClass:
-    "Demostration class for funtools"
+    "Demonstration class for functools"
 
     def __call__(self, e, f=6):
         "Docstring for MyClass.__call__"
-        print(' called object with:', (self, e, f))
+        print(" called object with:", (self, e, f))
+
 
 def show_details(name, f):
     "Show details of a callable object."
@@ -17,6 +19,7 @@ def show_details(name, f):
     except AttributeError:
         print('(no __name__)')
     print(' __doc__', repr(f.__doc__))
+
     return
 
 o = MyClass()
@@ -24,7 +27,6 @@ o = MyClass()
 show_details('instance', o)
 o('e goes here')
 print()
-
 
 p = functools.partial(o, e='default for e', f=8)
 functools.update_wrapper(p, o)

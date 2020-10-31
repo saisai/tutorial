@@ -1,18 +1,17 @@
 import functools
 
 def show_details(name, f):
-    """
-    SHow details of a callable object.
-    """
+    "Show details of a callable object."
     print('{}:'.format(name))
-    print(' object:', f)
-    print(' __name__:',end=' ')
+    print(" object:",f)
+    print(' __name__:', end=' ')
     try:
         print(f.__name__)
     except AttributeError:
-        pritn('(no __name__)')
+        print('(no __name__)')
     print(' __doc__', repr(f.__doc__))
     print()
+
 
 def simple_decorator(f):
     @functools.wraps(f)
@@ -22,8 +21,9 @@ def simple_decorator(f):
         return f(a, b=b)
     return decorated
 
+
 def myfunc(a, b=2):
-    'myfunc() is not complicated'
+    "myfunc() is not complicated"
     print(' myfunc:', (a, b))
     return
 
@@ -41,7 +41,8 @@ wrapped_myfunc('args to wrapped', 4)
 print()
 
 
-# wrap with decorator syntax
+
+# Wrap with decorator syntax
 @simple_decorator
 def decorated_myfunc(a, b):
     myfunc(a, b)
@@ -49,4 +50,4 @@ def decorated_myfunc(a, b):
 
 show_details('decorated_myfunc', decorated_myfunc)
 decorated_myfunc()
-decorated_myfunc('args to decoread', 4)
+decorated_myfunc('args to decorated', 4)

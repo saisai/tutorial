@@ -7,12 +7,11 @@ def standalone(self, a=1, b=2):
         print(' self.attr=', self.attr)
 
 class MyClass:
-    """
-    Demostratoin class for functools
-    """
+    "Demonstration class for functools"
 
     def __init__(self):
         self.attr = 'instance attribute'
+
 
     method1 = functools.partialmethod(standalone)
     method2 = functools.partial(standalone)
@@ -23,12 +22,11 @@ print('standalone')
 standalone(None)
 print()
 
-
 print('method1 as partialmethod')
 o.method1()
 print()
 
-print('method2 as parital')
+print('method2 as partial')
 try:
     o.method2()
 except TypeError as err:
